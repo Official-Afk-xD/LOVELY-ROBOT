@@ -3,7 +3,7 @@
     "logo": "https://telegra.ph/file/95e785dea2717adf59de6.png",
     "description": "Zaid music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/Itsunknown-12/Zaid-Vc-Player",
+    "repository": "https://github.com/Official-afk-xD/Zaid-music",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
