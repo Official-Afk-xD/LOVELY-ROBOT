@@ -2,11 +2,11 @@ import os
 
 from time import sleep
 
-from MashaRoBot import OWNER_ID, dispatcher
+from LovelyRobot import OWNER_ID, dispatcher
 
-from MashaRoBot.modules.helper_funcs.extraction import extract_user
+from LovelyRobot.modules.helper_funcs.extraction import extract_user
 
-from MashaRoBot.modules.sql.users_sql import get_user_com_chats
+from LovelyRobot.modules.sql.users_sql import get_user_com_chats
 
 from telegram import Update
 
