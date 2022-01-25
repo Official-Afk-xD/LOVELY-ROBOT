@@ -5,9 +5,9 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from MashaRoBot import DRAGONS, dispatcher
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
-from MashaRoBot.modules.helper_funcs.chat_status import (
+from LovelyRobot import DRAGONS, dispatcher
+from LovelyRobot.modules.disable import DisableAbleCommandHandler
+from LovelyRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -15,13 +15,13 @@ from MashaRoBot.modules.helper_funcs.chat_status import (
     user_admin,
     ADMIN_CACHE,
 )
-from MashaRoBot.helper_extra.admin_rights import (
+from LovelyRobot.helper_extra.admin_rights import (
     user_can_pin,
     user_can_promote,
     user_can_changeinfo,
 )
 
-from MashaRoBot.modules.helper_funcs.extraction import (
+from LovelyRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
