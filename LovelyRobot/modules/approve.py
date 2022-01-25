@@ -5,7 +5,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 from telegram.utils.helpers import mention_html
 
-import MashaRoBot.modules.sql.approve_sql as sql
+import LovelyRobot.modules.sql.approve_sql as sql
 from LovelyRobot import DRAGONS, dispatcher
 from LovelyRobot.modules.disable import DisableAbleCommandHandler
 from LovelyRobot.modules.helper_funcs.chat_status import user_admin
