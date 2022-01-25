@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib
-from MashaRoBot import telethn as tbot
+from LovelyRobot import telethn as tbot
 import glob
 import io
 import os
@@ -282,6 +282,6 @@ __help__ = """
  ❍ /img <text>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
  ❍ /app <appname>*:* Searches for an app in Play Store and returns its details.
  ❍ /reverse: Does a reverse image search of the media which it was replied to.
- ❍ Masha <query>*:* Masha answers the query
+ ❍ Lovely <query>*:* Lovely answers the query
   💡Ex: `Athena where is India?`
 """
