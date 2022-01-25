@@ -5,7 +5,7 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import MashaRoBot.modules.sql.notes_sql as sql
+import LovelyRobot.modules.sql.notes_sql as sql
 from LovelyRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
 from LovelyRobot.__main__ import DATA_IMPORT
 from LovelyRobot.modules.helper_funcs.chat_status import user_admin
