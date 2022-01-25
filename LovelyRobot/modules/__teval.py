@@ -1,4 +1,4 @@
-from MashaRoBot import telethn as client
+from LovelyRobot import telethn as client
 import os, logging, asyncio, io, sys, traceback
 from datetime import datetime
 from os import environ, execle
