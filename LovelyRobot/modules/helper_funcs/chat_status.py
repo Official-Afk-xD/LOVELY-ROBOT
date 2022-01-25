@@ -6,7 +6,7 @@ from cachetools import TTLCache
 
 from threading import RLock
 
-from MashaRoBot import (
+from LovelyRobot import (
 
     DEL_CMDS,
 
