@@ -1,12 +1,12 @@
-from MashaRoBot.events import register
-from MashaRoBot import telethn as tbot
+from LovelyRobot.events import register
+from LovelyRobot import telethn as tbot
 TMP_DOWNLOAD_DIRECTORY = "./"
 from telethon import events
 import os
 from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
-darkprince = "MASHA"
+Log afk = "Lovely"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=darkprince)
 auth_url = r["auth_url"]
