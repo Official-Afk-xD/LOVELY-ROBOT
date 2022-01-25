@@ -6,22 +6,22 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
 import MashaRoBot.modules.sql.notes_sql as sql
-from MashaRoBot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from MashaRoBot.__main__ import DATA_IMPORT
-from MashaRoBot.modules.helper_funcs.chat_status import user_admin
-from MashaRoBot.modules.helper_funcs.alternate import typing_action
+from LovelyRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from LovelyRobot.__main__ import DATA_IMPORT
+from LovelyRobot.modules.helper_funcs.chat_status import user_admin
+from LovelyRobot.modules.helper_funcs.alternate import typing_action
 
-# from MashaRoBot.modules.rules import get_rules
-import MashaRoBot.modules.sql.rules_sql as rulessql
+# from LovelyRobot.modules.rules import get_rules
+import LovelyRobot.modules.sql.rules_sql as rulessql
 
-# from MashaRoBot.modules.sql import warns_sql as warnssql
-import MashaRoBot.modules.sql.blacklist_sql as blacklistsql
-from MashaRoBot.modules.sql import disable_sql as disabledsql
+# from LovelyRobot.modules.sql import warns_sql as warnssql
+import LovelyRobot.modules.sql.blacklist_sql as blacklistsql
+from LovelyRobot.modules.sql import disable_sql as disabledsql
 
-# from MashaRoBot.modules.sql import cust_filters_sql as filtersql
-# import MashaRoBot.modules.sql.welcome_sql as welcsql
-import MashaRoBot.modules.sql.locks_sql as locksql
-from MashaRoBot.modules.connection import connected
+# from LovelyRobot.modules.sql import cust_filters_sql as filtersql
+# import LovelyRobot.modules.sql.welcome_sql as welcsql
+import LovelyRobot.modules.sql.locks_sql as locksql
+from LovelyRobot.modules.connection import connected
 
 
 @run_async
@@ -341,7 +341,7 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("MashaRoBot{}.backup".format(chat_id), "rb"),
+        document=open("LovelyRobot{}.backup".format(chat_id), "rb"),
         caption="💾*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `MashaRoBot-Backup` was specially made for notes 📚.".format(
             chat.title, chat_id, tgl
         ),
@@ -349,7 +349,7 @@ def export_data(update, context):
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("MashaRoBot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("LovelyRobot{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data
@@ -367,7 +367,7 @@ def get_chat(chat_id, chat_data):
         return {"status": False, "value": False}
 
 
-__mod_name__ = "ʙᴀᴄᴋᴜᴘ🎒"
+__mod_name__ = "Bᴀᴄᴋᴜᴘ🎒"
 
 __help__ = """
 *Only for group owner:*
