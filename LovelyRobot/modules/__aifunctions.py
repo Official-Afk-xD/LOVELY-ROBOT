@@ -1,16 +1,16 @@
 # 🙈 Give me ⭐️ before kanging code
-# © @Mr_Dark_Prince 🌚
+# © @Log_afk 🌚
 
 import requests
 url = "https://iamai.p.rapidapi.com/ask"
-from MashaRoBot import telethn, OWNER_ID
-from MashaRoBot.events import register
+from LovelyRobot import telethn, OWNER_ID
+from LovelyRobot.events import register
 from telethon import events
 from telethon import types
 from telethon.tl import functions
 import asyncio, os
 
-@register(pattern="Masha (.*)")
+@register(pattern="Lovely (.*)")
 async def hmm(event):
   test = event.pattern_match.group(1)
   r = ('\n    \"consent\": true,\n    \"ip\": \"::1\",\n    \"question\": \"{}\"\n').format(test)
