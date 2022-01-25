@@ -13,7 +13,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from MashaRoBot import (
+from LovelyRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -23,9 +23,9 @@ from MashaRoBot import (
     WOLVES,
     dispatcher,
 )
-import MashaRoBot.modules.sql.users_sql as sql
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
-from MashaRoBot.modules.helper_funcs.chat_status import (
+import LovelyRobot.modules.sql.users_sql as sql
+from LovelyRobot.modules.disable import DisableAbleCommandHandler
+from LovelyRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     bot_admin,
     can_restrict,
@@ -37,9 +37,9 @@ from MashaRoBot.modules.helper_funcs.chat_status import (
     user_can_ban,
     can_delete,
 )
-from MashaRoBot.modules.helper_funcs.extraction import extract_user_and_text
-from MashaRoBot.modules.helper_funcs.string_handling import extract_time
-from MashaRoBot.modules.log_channel import gloggable, loggable
+from LovelyRobot.modules.helper_funcs.extraction import extract_user_and_text
+from LovelyRobot.modules.helper_funcs.string_handling import extract_time
+from LovelyRobot.modules.log_channel import gloggable, loggable
 
 UNBAN_IMG= "https://telegra.ph/file/0ac714f6c537a2570cfd3.mp4"
 BAN_IMG= "https://telegra.ph/file/35ae9ea0ae57d53b98c0f.mp4"
