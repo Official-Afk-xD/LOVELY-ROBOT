@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import MashaRoBot.modules.sql.blacklist_sql as sql
-from MashaRoBot import dispatcher, LOGGER
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
-from MashaRoBot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from MashaRoBot.modules.helper_funcs.extraction import extract_text
-from MashaRoBot.modules.helper_funcs.misc import split_message
-from MashaRoBot.modules.log_channel import loggable
-from MashaRoBot.modules.warns import warn
-from MashaRoBot.modules.helper_funcs.string_handling import extract_time
-from MashaRoBot.modules.connection import connected
-from MashaRoBot.modules.sql.approve_sql import is_approved
-from MashaRoBot.modules.helper_funcs.alternate import send_message, typing_action
+import LovelyRobot.modules.sql.blacklist_sql as sql
+from LovelyRobot import dispatcher, LOGGER
+from LovelyRobot.modules.disable import DisableAbleCommandHandler
+from LovelyRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from LovelyRobot.modules.helper_funcs.extraction import extract_text
+from LovelyRobot.modules.helper_funcs.misc import split_message
+from LovelyRobot.modules.log_channel import loggable
+from LovelyRobot.modules.warns import warn
+from LovelyRobot.modules.helper_funcs.string_handling import extract_time
+from LovelyRobot.modules.connection import connected
+from LovelyRobot.modules.sql.approve_sql import is_approved
+from LovelyRobot.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 
