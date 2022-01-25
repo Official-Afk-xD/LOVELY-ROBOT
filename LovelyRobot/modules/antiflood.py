@@ -4,15 +4,15 @@ import re
 
 from telegram import Message, Chat, Update, User, ChatPermissions
 
-from MashaRoBot import TIGERS, WOLVES, dispatcher
-from MashaRoBot.modules.helper_funcs.chat_status import (
+from LovelyRobot import TIGERS, WOLVES, dispatcher
+from LovelyRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from MashaRoBot.modules.log_channel import loggable
-from MashaRoBot.modules.sql import antiflood_sql as sql
+from LovelyRobot.modules.log_channel import loggable
+from LovelyRobot.modules.sql import antiflood_sql as sql
 from telegram.error import BadRequest
 from telegram.ext import (
     CallbackContext,
@@ -23,10 +23,10 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html, escape_markdown
-from MashaRoBot.modules.helper_funcs.string_handling import extract_time
-from MashaRoBot.modules.connection import connected
-from MashaRoBot.modules.helper_funcs.alternate import send_message
-from MashaRoBot.modules.sql.approve_sql import is_approved
+from LovelyRobot.modules.helper_funcs.string_handling import extract_time
+from LovelyRobot.modules.connection import connected
+from LovelyRobot.modules.helper_funcs.alternate import send_message
+from LovelyRobot.modules.sql.approve_sql import is_approved
 
 FLOOD_GROUP = 3
 
