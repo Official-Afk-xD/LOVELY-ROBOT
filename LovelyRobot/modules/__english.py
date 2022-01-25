@@ -1,7 +1,7 @@
-from MashaRoBot import telethn as tbot
+from LovelyRobot import telethn as tbot
 import json
 import requests
-from MashaRoBot.events import register
+from LovelyRobot.events import register
 from telethon import *
 from telethon.tl import functions
 import os
