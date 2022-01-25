@@ -6,11 +6,11 @@ from telegram import ParseMode, Update, ChatPermissions
 from telegram.ext import CallbackContext, run_async
 from telegram.error import BadRequest
 
-import MashaRoBot.modules.animequotes_strings as animequotes_strings
-from MashaRoBot import dispatcher
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
-from MashaRoBot.modules.helper_funcs.chat_status import (is_user_admin)
-from MashaRoBot.modules.helper_funcs.extraction import extract_user
+import LovelyRobot.modules.animequotes_strings as animequotes_strings
+from LovelyRobot import dispatcher
+from LovelyRobot.modules.disable import DisableAbleCommandHandler
+from LovelyRobot.modules.helper_funcs.chat_status import (is_user_admin)
+from LovelyRobot.modules.helper_funcs.extraction import extract_user
 
 @run_async
 def fun(update: Update, context: CallbackContext):
@@ -28,7 +28,7 @@ ANIMEQUOTES_HANDLER = DisableAbleCommandHandler("fun", fun)
 
 dispatcher.add_handler(ANIMEQUOTES_HANDLER)
 
-__mod_name__ = "ᴛᴀᴍɪʟ ᴍᴇᴍᴇs"
+__mod_name__ = "Hindi ᴍᴇᴍᴇs"
 __command_list__ = [
     "fun"
 ]
