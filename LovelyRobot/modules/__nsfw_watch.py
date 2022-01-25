@@ -1,9 +1,9 @@
-from MashaRoBot import telethn as bot
-from MashaRoBot import telethn as tbot
-from MashaRoBot.events import register
+from LovelyRobot import telethn as bot
+from LovelyRobot import telethn as tbot
+from LovelyRobot.events import register
 from telethon import *
 from telethon import Button, custom, events, functions
-from MashaRoBot.helper_extra.badmedia import is_nsfw
+from LovelyRobot.helper_extra.badmedia import is_nsfw
 import requests
 import string 
 import random 
