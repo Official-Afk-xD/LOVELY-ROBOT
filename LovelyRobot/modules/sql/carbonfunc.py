@@ -7,7 +7,7 @@ from random import randint
 from re import findall
 from time import time
 from datetime import timedelta, datetime
-from MashaRoBot import aiohttpsession as aiosession
+from LovelyRobot import aiohttpsession as aiosession
 import aiofiles
 import aiohttp
 import speedtest
