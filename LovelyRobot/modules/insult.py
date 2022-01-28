@@ -4,9 +4,9 @@ from telegram.ext import run_async, Filters
 
 from telegram import Message, Chat, Update, Bot, MessageEntity
 
-from MashaRoBot import dispatcher
+from LovelyRobot import dispatcher
 
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
+from LovelyRobot.modules.disable import DisableAbleCommandHandler
 
 SFW_STRINGS = (
 
@@ -132,7 +132,7 @@ SFW_STRINGS = (
 
     "You can be the first person to step on sun. Have a try.",
 
-     "jada aano monusae @AnonymousD3061 🤭.",
+     "Baby Sona ka pyar @log_afk 🤭.",
 
 )
 
