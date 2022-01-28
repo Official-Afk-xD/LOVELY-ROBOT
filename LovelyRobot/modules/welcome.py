@@ -5,8 +5,8 @@ import time
 from functools import partial
 from contextlib import suppress
 
-import MashaRoBot.modules.sql.welcome_sql as sql
-import MashaRoBot
+import LovelyRobot.modules.sql.welcome_sql as sql
+import LovelyRobot
 from MashaRoBot import (
     DEV_USERS,
     LOGGER,
@@ -19,18 +19,18 @@ from MashaRoBot import (
     dispatcher,
     JOIN_LOGGER
 )
-from MashaRoBot.modules.helper_funcs.chat_status import (
+from LovelyRobot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from MashaRoBot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from MashaRoBot.modules.helper_funcs.msg_types import get_welcome_type
-from MashaRoBot.modules.helper_funcs.string_handling import (
+from LovelyRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from LovelyRobot.modules.helper_funcs.msg_types import get_welcome_type
+from LovelyRobot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from MashaRoBot.modules.log_channel import loggable
-from MashaRoBot.modules.sql.global_bans_sql import is_user_gbanned
+from LovelyRobot.modules.log_channel import loggable
+from LovelyRobot.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -265,7 +265,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome yourself
             elif new_mem.id == bot.id:
                 creator = None
-                if not MashaRoBot.ALLOW_CHATS:
+                if not LovelyRobot.ALLOW_CHATS:
                     with suppress(BadRequest):
                          update.effective_message.reply_text(f"Groups are disabled for {bot.first_name}, I'm outta here.")
                     bot.leave_chat(update.effective_chat.id)
