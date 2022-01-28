@@ -32,7 +32,7 @@ from LovelyRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_fban,
 )
-from MashaRoBot.modules.helper_funcs.string_handling import markdown_parser
+from LovelyRobot.modules.helper_funcs.string_handling import markdown_parser
 
 # Hello bot owner, I spended for feds many hours of my life, Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too
 # Federation by MrYacha 2018-2019
