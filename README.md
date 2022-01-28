@@ -1,41 +1,29 @@
- <h1 align="center"><b>✨Lonely King Bot ✨</b></h1>
+ <h1 align="center"><b>🌹Lovely Robot 🌹</b></h1>
 
 <h4 align="center">A Powerful, Smart And Advance Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
 <p align='center'>
-  <a href="https://www.python.org/" alt="made-with-python"> <img src="https://telegra.ph/file/55a6ede16b82dc54a54c8.jpg?style=flat-square&logo=python&color=blue" /> </a>
-  <a href="https://github.com/Kdifamily/thanimaiclone/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square" /> </a>
-</p>
+  <a href="https://www.python.org/" alt="made-with-python"> <img src="https://telegra.ph/file/09314a3492d7e68489b75.jpg" /> </a>
 
-<p align="center"><a href="https://t.me/thanimaisupport"><img src="nh" width="400"></a></p>
-<p align="center">
-    <a href="https://app.codacy.com/gh/kdifamily/thanimaiclone/dashboard"> <img src="https://img.shields.io/codacy/grade/4d58f2a402b54aed8a7d95f7add45a81?color=brightgreen&logo=codacy&logoColor=green&style=for-the-badge" alt="Codacy" /></a>
-    <a href="https://github.com/proTamizhan"> <img src="https://img.shields.io/github/repo-size/TeamOfShadow/Shadow?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/proTamizhan/"> <img src="https://img.shields.io/github/last-commit/TeamOfShadow/Shadow?color=brown&logo=github&logoColor=green&style=for-the-badge" /></a>
-    
-## how to deploy on railway
-## first fill ur config.py
-## Go railway.app fork this repo and select ur forked repo and deploy
+<p align="center"><a href="https://t.me/Blaze_support"><img src="nh" width="400"></a></p>
 
 
 > ⭐️ Thanks to everyone who starred our projects,
  That is the greatest pleasure we have !
 
 # ❤️ Support
-<a href="https://t.me/thanimaibots"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://t.me/blaze_Support"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 
-<a href="https://t.me/thanimaisupport"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+<a href="https://t.me/the_blaze_Network"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
- 
-# Special Credits
-- MASHAROBOT
+
 
 ### ✪ Owners
-- [🔥 TheTelegrampro🔥](https://t.me/TheTelegrampro) » [GitHub](https://github.com/proTamizhan) (Bot Founder)
+- [🔥 HARSH PANDIT🔥](https://t.me/TheTelegrampro) » [GitHub](https://github.com/OFFICIAL-AFK-XD) (Bot Founder)
 
 
   <h1>
     <p align="center">
-        <a href="https://heroku.com/deploy?template=https://github.com/proTamizhan/thanimaibot">
+        <a href="https://heroku.com/deploy?template=https://github.com/OFFICIAL-AFK-XD/Lovely-Robot">
             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
         </a>
     </p>
@@ -52,7 +40,7 @@ The Unlimited Dyons to Deploy This Bot is Via Railway.
 	
   <h1>
     <p align="center">
-        <a href="https://railway.app/new/template?template=https://github.com/proTamizhan/thanimaibot">
+        <a href="https://railway.app/new/template?template=https://github.com/Official-afk-xD/Lovely-Robot">
             <img src="https://railway.app/button.svg" alt="Deploy">
         </a>
     </p>
