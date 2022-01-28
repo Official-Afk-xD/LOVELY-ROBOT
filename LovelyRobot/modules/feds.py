@@ -22,12 +22,12 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, mention_markdown
 
-import MashaRoBot.modules.sql.feds_sql as sql
-from MashaRoBot import DRAGONS, EVENT_LOGS, LOGGER, OWNER_ID, TIGERS, WOLVES, dispatcher
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
-from MashaRoBot.modules.helper_funcs.alternate import send_message
-from MashaRoBot.modules.helper_funcs.chat_status import is_user_admin
-from MashaRoBot.modules.helper_funcs.extraction import (
+import LovelyRobot.modules.sql.feds_sql as sql
+from LovelyRobot import DRAGONS, EVENT_LOGS, LOGGER, OWNER_ID, TIGERS, WOLVES, dispatcher
+from LovelyRobot.modules.disable import DisableAbleCommandHandler
+from LovelyRobot.modules.helper_funcs.alternate import send_message
+from LovelyRobot.modules.helper_funcs.chat_status import is_user_admin
+from LovelyRobot.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
@@ -94,13 +94,13 @@ def new_fed(update: Update, context: CallbackContext):
         LOGGER.info(fed_id)
 
         # Currently only for creator
-        # if fednam == 'Team Nusantara Disciplinary Circle':
-        # fed_id = "TeamNusantaraDevs"
+        # if fednam == '@The_blaze_fighter':
+        # fed_id = "The_blaze_fighter"
 
         x = sql.new_fed(user.id, fed_name, fed_id)
         if not x:
             update.effective_message.reply_text(
-                "Can't federate! Please contact @OnePunchSupport if the problem persist."
+                "Can't federate! Please contact @The_blaze_fighter if the problem persist."
             )
             return
 
@@ -651,7 +651,7 @@ def fed_ban(update: Update, context: CallbackContext):
 
     if fban:
         fed_name = info["fname"]
-        # https://t.me/OnePunchSupport/41606 // https://t.me/OnePunchSupport/41619
+        # https://t.me/Blaze_Support/41606 // https://t.me/UNIQUE_SOCIETY/41619
         # starting = "The reason fban is replaced for {} in the Federation <b>{}</b>.".format(user_target, fed_name)
         # send_message(update.effective_message, starting, parse_mode=ParseMode.HTML)
 
