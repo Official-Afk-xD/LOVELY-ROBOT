@@ -25,9 +25,9 @@ from LovelyRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from MashaRoBot.modules.log_channel import loggable
-from MashaRoBot.modules.helper_funcs.alternate import send_message
-from MashaRoBot.modules.helper_funcs.alternate import typing_action
+from LovelyRobot.modules.log_channel import loggable
+from LovelyRobot.modules.helper_funcs.alternate import send_message
+from LovelyRobot.modules.helper_funcs.alternate import typing_action
 
 
 @run_async
