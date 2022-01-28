@@ -1,9 +1,9 @@
 from typing import Optional
 
-import MashaRoBot.modules.sql.rules_sql as sql
-from MashaRoBot import dispatcher
-from MashaRoBot.modules.helper_funcs.chat_status import user_admin
-from MashaRoBot.modules.helper_funcs.string_handling import markdown_parser
+import LovelyRobot.modules.sql.rules_sql as sql
+from LovelyRobot import dispatcher
+from LovelyRobot.modules.helper_funcs.chat_status import user_admin
+from LovelyRobot.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
