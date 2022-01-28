@@ -2,7 +2,7 @@ import json
 import re
 import html
 import requests
-import MashaRoBot.modules.sql.kukiai_sql as sql
+import LovelyRobot.modules.sql.kukiai_sql as sql
 
 from time import sleep
 from pyrogram.types import (
@@ -17,10 +17,10 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-from MashaRoBot.modules.helper_funcs.filters import CustomFilters
-from MashaRoBot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from MashaRoBot import dispatcher, updater, SUPPORT_CHAT
-from MashaRoBot.modules.log_channel import gloggable
+from LovelyRobot.modules.helper_funcs.filters import CustomFilters
+from LovelyRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from LovelyRobot import dispatcher, updater, SUPPORT_CHAT
+from LovelyRobot.modules.log_channel import gloggable
 
  
 @user_admin_no_reply
