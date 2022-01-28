@@ -1,8 +1,8 @@
-# © @Mr_Dark_Prince
+# © @log_afk
 import sys
 import traceback
 from functools import wraps
-from MashaRoBot import pbot, SUPPORT_CHAT
+from LovelyRobot import pbot, SUPPORT_CHAT
 
 def split_limits(text):
     if len(text) < 2048:
