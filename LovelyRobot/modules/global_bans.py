@@ -14,9 +14,9 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import MashaRoBot.modules.sql.global_bans_sql as sql
-from MashaRoBot.modules.sql.users_sql import get_user_com_chats
-from MashaRoBot import (
+import LovelyRobot.modules.sql.global_bans_sql as sql
+from LovelyRobot.modules.sql.users_sql import get_user_com_chats
+from LovelyRobot import (
     DEV_USERS,
     EVENT_LOGS,
     OWNER_ID,
@@ -30,16 +30,16 @@ from MashaRoBot import (
     sw,
     dispatcher,
 )
-from MashaRoBot.modules.helper_funcs.chat_status import (
+from LovelyRobot.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from MashaRoBot.modules.helper_funcs.extraction import (
+from LovelyRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from MashaRoBot.modules.helper_funcs.misc import send_to_list
+from LovelyRobot.modules.helper_funcs.misc import send_to_list
 
 GBAN_ENFORCE_GROUP = 6
 
@@ -119,7 +119,7 @@ def gban(update: Update, context: CallbackContext):
         message.reply_text("You uhh...want me to punch myself?")
         return
 
-    if user_id in [777000, 1087968824]:
+    if user_id in [777000, 5052969674]:
         message.reply_text("Fool! You can't attack Telegram's native tech!")
         return
 
