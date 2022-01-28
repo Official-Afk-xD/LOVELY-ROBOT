@@ -8,9 +8,9 @@ from PIL import Image
 from pyrogram import filters
 from pyrogram.types import Message
 
-from MashaRoBot import pbot as app
-from MashaRoBot.utils.errors import capture_err
-from MashaRoBot.utils.sections import section
+from LovelyRobot import pbot as app
+from LovelyRobot.utils.errors import capture_err
+from LovelyRobot.utils.sections import section
 
 
 async def convert(
