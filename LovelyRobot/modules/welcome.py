@@ -7,7 +7,7 @@ from contextlib import suppress
 
 import LovelyRobot.modules.sql.welcome_sql as sql
 import LovelyRobot
-from MashaRoBot import (
+from LovelyRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
