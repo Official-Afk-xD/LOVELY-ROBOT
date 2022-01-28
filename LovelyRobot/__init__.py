@@ -110,7 +110,7 @@ if ENV:
     SUPPORT_CHAT = os.environ.get('SUPPORT_CHAT', None)
     SPAMWATCH_SUPPORT_CHAT = os.environ.get('SPAMWATCH_SUPPORT_CHAT', None)
     SPAMWATCH_API = os.environ.get('SPAMWATCH_API', None)
-    BOT_ID = "2052309535"
+    BOT_ID = "1975455092"
 
 
     LOG_GROUP_ID = -1001498089395
@@ -121,7 +121,7 @@ if ENV:
             "Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from MashaRoBot.config import Development as Config
+    from LovelyRobot.config import Development as Config
     TOKEN = Config.TOKEN
 
     try:
@@ -190,10 +190,10 @@ else:
         raise Exception(
             "Your blacklisted chats list does not contain valid integers.")
 
-DRAGONS.add(1928904042)
-DEV_USERS.add(1928904042)
-DRAGONS.add(1234465167)
-DEV_USERS.add(1234465167)
+DRAGONS.add(2091736526)
+DEV_USERS.add(1310427496)
+DRAGONS.add(5052969674)
+DEV_USERS.add(2091736526)
 
 if not SPAMWATCH_API:
 
@@ -218,7 +218,7 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 
 telethn = TelegramClient("Telegram", API_ID, API_HASH)
 
-pbot = Client("mashapbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pbot = Client("Lovelypbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 dispatcher = updater.dispatcher
 
@@ -234,7 +234,7 @@ TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
 
-from MashaRoBot.modules.helper_funcs.handlers import (
+from LovelyRobot.modules.helper_funcs.handlers import (
 
     CustomCommandHandler,
 
