@@ -3,7 +3,7 @@ import json
 import os
 from typing import Optional
 
-from MashaRoBot import (
+from LovelyRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -13,13 +13,13 @@ from MashaRoBot import (
     WOLVES,
     dispatcher,
 )
-from MashaRoBot.modules.helper_funcs.chat_status import (
+from LovelyRobot.modules.helper_funcs.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
 )
-from MashaRoBot.modules.helper_funcs.extraction import extract_user
-from MashaRoBot.modules.log_channel import gloggable
+from LovelyRobot.modules.helper_funcs.extraction import extract_user
+from LovelyRobot.modules.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
@@ -645,7 +645,7 @@ Group admins/group owners do not need these commands.
  ❍ /logs Get heroku dyno logs.
 
 `⚠️ Read from top`
-Visit *@thanimaisupport* for more information.
+Visit *@Blaze_Support* for more information.
 """
 
 SUDO_HANDLER = CommandHandler(("addsudo", "adddragon"), addsudo)
