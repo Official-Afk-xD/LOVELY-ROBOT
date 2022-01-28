@@ -3,9 +3,9 @@ import re
 from typing import Optional
 
 import telegram
-from MashaRoBot import TIGERS, WOLVES, dispatcher
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
-from MashaRoBot.modules.helper_funcs.chat_status import (
+from LovelyRobot import TIGERS, WOLVES, dispatcher
+from LovelyRobot.modules.disable import DisableAbleCommandHandler
+from LovelyRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -14,16 +14,16 @@ from MashaRoBot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from MashaRoBot.modules.helper_funcs.extraction import (
+from LovelyRobot.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from MashaRoBot.modules.helper_funcs.filters import CustomFilters
-from MashaRoBot.modules.helper_funcs.misc import split_message
-from MashaRoBot.modules.helper_funcs.string_handling import split_quotes
-from MashaRoBot.modules.log_channel import loggable
-from MashaRoBot.modules.sql import warns_sql as sql
+from LovelyRobot.modules.helper_funcs.filters import CustomFilters
+from LovelyRobot.modules.helper_funcs.misc import split_message
+from LovelyRobot.modules.helper_funcs.string_handling import split_quotes
+from LovelyRobot.modules.log_channel import loggable
+from LovelyRobot.modules.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -45,7 +45,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from MashaRoBot.modules.sql.approve_sql import is_approved
+from LovelyRobot.modules.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
