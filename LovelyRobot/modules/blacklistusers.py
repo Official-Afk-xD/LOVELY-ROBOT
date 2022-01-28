@@ -1,7 +1,7 @@
 # Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 import html
-import MashaRoBot.modules.sql.blacklistusers_sql as sql
-from MashaRoBot import (
+import LovelyRobot.modules.sql.blacklistusers_sql as sql
+from LovelyRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -10,12 +10,12 @@ from MashaRoBot import (
     WOLVES,
     dispatcher,
 )
-from MashaRoBot.modules.helper_funcs.chat_status import dev_plus
-from MashaRoBot.modules.helper_funcs.extraction import (
+from LovelyRobot.modules.helper_funcs.chat_status import dev_plus
+from LovelyRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from MashaRoBot.modules.log_channel import gloggable
+from LovelyRobot.modules.log_channel import gloggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async
