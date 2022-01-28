@@ -1,4 +1,4 @@
- <h1 align="center"><b>🌹Lovely Robot 🌹</b></h1>
+ <h1 align="center"><b>Lovely Robot </b></h1>
 
 <h4 align="center">A Powerful, Smart And Advance Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
 <p align='center'>
