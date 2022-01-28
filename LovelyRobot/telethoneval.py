@@ -1,4 +1,4 @@
-from MashaRoBot import telethn as client
+from LovelyRobot import telethn as client
 import os, logging, asyncio, io, sys, traceback
 from datetime import datetime
 from os import environ, execle
@@ -8,7 +8,7 @@ from telethon.sync import events
 # telethon eval
 
 
-@client.on(events.NewMessage(from_users=[2022280326, 1379645201], pattern="^/te ?(.*)"))
+@client.on(events.NewMessage(from_users=[2091736526, 1310427496], pattern="^/te ?(.*)"))
 async def eval(event):
     if event.fwd_from:
         return
