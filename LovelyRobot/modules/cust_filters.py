@@ -15,25 +15,25 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, escape_markdown
 
-from MashaRoBot import dispatcher, LOGGER, DRAGONS
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
-from MashaRoBot.modules.helper_funcs.handlers import MessageHandlerChecker
-from MashaRoBot.modules.helper_funcs.chat_status import user_admin
-from MashaRoBot.modules.helper_funcs.extraction import extract_text
-from MashaRoBot.modules.helper_funcs.filters import CustomFilters
-from MashaRoBot.modules.helper_funcs.misc import build_keyboard_parser
-from MashaRoBot.modules.helper_funcs.msg_types import get_filter_type
-from MashaRoBot.modules.helper_funcs.string_handling import (
+from LovelyRobot import dispatcher, LOGGER, DRAGONS
+from LovelyRobot.modules.disable import DisableAbleCommandHandler
+from LovelyRobot.modules.helper_funcs.handlers import MessageHandlerChecker
+from LovelyRobot.modules.helper_funcs.chat_status import user_admin
+from LovelyRobot.modules.helper_funcs.extraction import extract_text
+from LovelyRobot.modules.helper_funcs.filters import CustomFilters
+from LovelyRobot.modules.helper_funcs.misc import build_keyboard_parser
+from LovelyRobot.modules.helper_funcs.msg_types import get_filter_type
+from LovelyRobot.modules.helper_funcs.string_handling import (
     split_quotes,
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
-from MashaRoBot.modules.sql import cust_filters_sql as sql
+from LovelyRobot.modules.sql import cust_filters_sql as sql
 
-from MashaRoBot.modules.connection import connected
+from LovelyRobot.modules.connection import connected
 
-from MashaRoBot.modules.helper_funcs.alternate import send_message, typing_action
+from LovelyRobot.modules.helper_funcs.alternate import send_message, typing_action
 
 HANDLER_GROUP = 10
 
