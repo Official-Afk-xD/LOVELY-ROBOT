@@ -24,7 +24,7 @@ import re
 
 from telethon import events
 
-from MashaRoBot import telethn
+from LovelyRobot import telethn
 
 COLORS = [
 
