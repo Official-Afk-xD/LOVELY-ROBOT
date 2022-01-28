@@ -10,16 +10,16 @@ REPO_TEXT = "**Lovely [BOT](https://telegra.ph/file/526ed899597d7827474a1.jpg) w
   
 BUTTONS = InlineKeyboardMarkup(
       [[
-        InlineKeyboardButton("ʀᴇᴘᴏꜱɪᴛᴏʀʏ", url=f"https://github.com/TEAM-BLAZ/BLAZE-SPAMMER-ROBOT"),
+        InlineKeyboardButton("ʀᴇᴘᴏꜱɪᴛᴏʀʏ", url=f"https://github.com/Official-afk-xD"),
         InlineKeyboardButton("Gɪᴛʜᴜʙ", url=f"https://t.me/LOG_AFK"),
       ],[
-        InlineKeyboardButton("Oᴡɴᴇʀ ❣️", url="https://t.me/Evil_xD_boy"),
-        InlineKeyboardButton("Oᴡɴᴇʀ ❣️", url="https://t.me/Unknown_Shadow_xD"),
-       InlineKeyboardButton("Oᴡɴᴇʀ ❣️", url="https://t.me/its_jack"),
+        InlineKeyboardButton("Evil Boy ❣️", url="https://t.me/Evil_xD_boy"),
+        InlineKeyboardButton("Official Afk", url="https://t.me/Official_afk_xD"),
+       InlineKeyboardButton("Support", url="https://t.me/Blaze_support"),
       ],[
-        InlineKeyboardButton("Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/Blaze_Support"),
+        InlineKeyboardButton("Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/UNIQUE_SOCIETY"),
         InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Harsh_Pandit_xD"),
-       InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/The_Blaze_network"),
+       InlineKeyboardButton("Powered by", url="https://t.me/The_Blaze_network"),
       ]]
     )
   
