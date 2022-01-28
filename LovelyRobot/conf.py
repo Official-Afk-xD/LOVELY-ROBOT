@@ -1,6 +1,6 @@
 from envparse import env
 
-from MashaRoBot import LOGGER
+from LovelyRobot import LOGGER
 
 DEFAULTS = {
 
