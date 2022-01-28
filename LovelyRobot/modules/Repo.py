@@ -6,7 +6,7 @@ from LovelyRobot.conf import get_str_key
 from LovelyRobot import pbot
  
  # pls don't delete
-REPO_TEXT = "**Lovely [BOT](https://telegra.ph/file/526ed899597d7827474a1.jpg) will Make Your Groups Secured And it's have a lot of fun features (:  ! \n\n↼ Owner ⇀ : 『 [𝐋ᴏɢ ✘ Ꭺғᴋ xD](t.me/log_afk) 』\n╭──────────────\n┣─ » Python ~ 3.8.6\n┣─ » Update ~ Recently\n╰──────────────\n\n»»» @UNIQUE_SOCIETY «««"
+REPO_TEXT = "**Lovely [BOT](https://telegra.ph/file/09314a3492d7e68489b75.jpg) will Make Your Groups Secured And it's have a lot of fun features (:  ! \n\n↼ Owner ⇀ : 『 [𝐋ᴏɢ ✘ Ꭺғᴋ xD](t.me/log_afk) 』\n╭──────────────\n┣─ » Python ~ 3.8.6\n┣─ » Update ~ Recently\n╰──────────────\n\n»»» @UNIQUE_SOCIETY «««"
   
 BUTTONS = InlineKeyboardMarkup(
       [[
