@@ -1,10 +1,10 @@
 {
 
-      "name": "lonely king bot ",
+      "name": "Lovely Robot ",
 
-      "description": "Telegram group management bot.",
+      "description": "Telegram group management bot Powered By @THE_BLAZE_NETWORK ⛦➪.",
 
-      "logo": "https://telegra.ph/file/2bc7bec8308bdcf9512d6.jpg",
+      "logo": "https://telegra.ph/file/09314a3492d7e68489b75.jpg",
 
       "keywords": [
 
@@ -20,7 +20,7 @@
 
       ],   
 
-   "repository": "https://github.com/proTamizhan/thanimaibotgit",
+   "repository": "https://github.com/Official-afk-xD/Lovely-Robot",
 
    "addons": [
 
@@ -102,7 +102,7 @@
 
          "required": true,
 
-         "value": "1928904042"
+         "value": "2091736526"
 
       },
 
@@ -136,7 +136,7 @@
 
          "description": "Your username without the @",
 
-         "value": "TheTelegrampro"
+         "value": "log_afk"
 
       },
 
@@ -182,7 +182,7 @@
 
          "required": true,
 
-         "value": "-1001319484169"
+         "value": "-1001577398383"
 
       },
 
@@ -232,7 +232,7 @@
 
          "required": false,
 
-         "value": "1956381927"
+         "value": "2091736526 1310427496 5052969674"
 
       },
 
@@ -366,7 +366,7 @@
 
          "required": false,
 
-         "value": "https://t.me/Laylalist"
+         "value": "https://t.me/Blaze_Support"
 
       },
 
