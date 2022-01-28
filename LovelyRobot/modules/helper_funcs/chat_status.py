@@ -682,6 +682,6 @@ def user_admin_no_reply(func):
 
 # Workaround for circular import with connection.py
 
-from MashaRoBot.modules import connection
+from LovelyRobot.modules import connection
 
 connected = connection.connected
