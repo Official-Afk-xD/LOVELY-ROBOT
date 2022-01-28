@@ -18,7 +18,7 @@
 
 
 ### ✪ Owners
-- [🔥 HARSH PANDIT🔥](https://t.me/TheTelegrampro) » [GitHub](https://github.com/OFFICIAL-AFK-XD) (Bot Founder)
+- [🔥 OFFICIAL AFK🔥](https://t.me/LOG_AFK) » [GitHub](https://github.com/OFFICIAL-AFK-XD) (Bot Founder)
 
 
   <h1>
