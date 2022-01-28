@@ -2,9 +2,9 @@ import importlib
 from typing import Union
 
 from future.utils import string_types
-from MashaRoBot import dispatcher
-from MashaRoBot.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
-from MashaRoBot.modules.helper_funcs.misc import is_module_loaded
+from LovelyRobot import dispatcher
+from LovelyRobot.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
+from LovelyRobot.modules.helper_funcs.misc import is_module_loaded
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,
@@ -20,12 +20,12 @@ FILENAME = __name__.rsplit(".", 1)[-1]
 # If module is due to be loaded, then setup all the magical handlers
 if is_module_loaded(FILENAME):
 
-    from MashaRoBot.modules.helper_funcs.chat_status import (
+    from LovelyRobot.modules.helper_funcs.chat_status import (
         connection_status,
         is_user_admin,
         user_admin,
     )
-    from MashaRoBot.modules.sql import disable_sql as sql
+    from LovelyRobot.modules.sql import disable_sql as sql
     from telegram.ext.dispatcher import run_async
 
     DISABLE_CMDS = []
@@ -65,7 +65,7 @@ if is_module_loaded(FILENAME):
                             return None
                         chat = update.effective_chat
                         user = update.effective_user
-                        if user.id == 1087968824:
+                        if user.id == 5052969674:
                             user_id = chat.id
                         else:
                             user_id = user.id
@@ -160,7 +160,7 @@ if is_module_loaded(FILENAME):
         args = context.args
         chat = update.effective_chat
         if len(args) >= 1:
-            disable_module = "MashaRoBot.modules." + args[0].rsplit(".", 1)[0]
+            disable_module = "LovelyRobot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(disable_module)
@@ -235,7 +235,7 @@ if is_module_loaded(FILENAME):
         chat = update.effective_chat
 
         if len(args) >= 1:
-            enable_module = "MashaRoBot.modules." + args[0].rsplit(".", 1)[0]
+            enable_module = "LovelyRobot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(enable_module)
