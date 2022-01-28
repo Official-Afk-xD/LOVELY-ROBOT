@@ -3,7 +3,7 @@ import os
 
 
 def get_user_list(config, key):
-    with open('{}/MashaRoBot/{}'.format(os.getcwd(), config),
+    with open('{}/LovelyRobot/{}'.format(os.getcwd(), config),
               'r') as json_file:
         return json.load(json_file)[key]
 
@@ -14,11 +14,11 @@ class Config(object):
     API_ID = "FILL API ID "  # integer value, dont use ""
     API_HASH = "FIL API HASH"
     TOKEN = "BOT_TOKEN"
-    OWNER_ID = 1732814103  
-    OWNER_USERNAME = "theTelegrampro"
-    SUPPORT_CHAT = 'Thanimaisupport'
-    JOIN_LOGGER = -1001739802989
-    EVENT_LOGS = -1001739802989
+    OWNER_ID = 2091736526  
+    OWNER_USERNAME = "log_afk"
+    SUPPORT_CHAT = 'Blaze_Support'
+    JOIN_LOGGER = -1001577398383
+    EVENT_LOGS = -1001577398383
 
     ALLOW_CHATS = "True"
     SQLALCHEMY_DATABASE_URI = 'ELEPHAT OR HEROKU DB URL'  
@@ -29,7 +29,7 @@ class Config(object):
     URL = None
     SPAMWATCH_API = ""  
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
-    BOT_ID = "2052309535"
+    BOT_ID = "1975455092"
     
     DRAGONS = get_user_list('elevated_users.json', 'sudos')
 
