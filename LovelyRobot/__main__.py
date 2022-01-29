@@ -99,20 +99,20 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="🚑 Support", url=f"https://t.me/BLAZE_SUPPORT"),
+        InlineKeyboardButton(text="🔐 Help & Cmd", callback_data="help_back"),
       InlineKeyboardButton(
-          text="Updates 📨", url=f"https://t.me/the_BLAZE_Network"
+          text="Inline ⚡", switch_inline_query_current_chat=""
       ),
   ],
   [
-      InlineKeyboardButton(text="🔐 Help Cmd", callback_data="help_back"),
+      InlineKeyboardButton(text="🚑 Support", url=f"https://t.me/BLAZE_SUPPORT"),
       InlineKeyboardButton(
-          text="Chitchat 🚑", url=f"https://t.me/UNIQUE_SOCIETY"
+          text="Updates 📢", url=f"https://t.me/The_Blaze_Network"
       ),
   ],
   [
       InlineKeyboardButton(
-          text="➕ Add me to Group ➕", url="t.me/HYPERMEN_RBOT?startgroup=true"),
+          text="➕ Add me to Group ➕", url="t.me/Lovely_ro_bot?startgroup=true"),
   ],
 ]
 
