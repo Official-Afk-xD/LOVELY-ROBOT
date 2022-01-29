@@ -1,9 +1,16 @@
+import html
+import os
+import json
 import importlib
 import time
 import re
+import sys
+import traceback
+import LovelyRobot.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
-
+from telegram import __version__ as peler
+from platform import python_version as memek
 from LovelyRobot import (
     ALLOW_EXCL,
     CERT_PATH,
@@ -72,50 +79,48 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+yurikorobot_IMG = "https://telegra.ph/file/21a7c5c3b87918ac464eb.jpg"
 
 PM_START_TEXT = """
-[🌈](https://telegra.ph/file/284f82e6cda5d8acaeb24.jpg) ' ☞ ✰Hᴇʟʟᴏ... Fʀɪᴇɴᴅꜱ I'ᴍ' [✰🅷yᴩᴇʀᴍᴇɴ ✘ 🆁ᴏʙᴏᴛ✰](https://t.me/hypermen_rbot)
-────────────────────
-* I'ᴍ ᴀɴ Mᴜsɪᴄ + Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ.*
-────────────────────
-✪ Hɪᴛ /help ᴛᴏ sᴇᴇ ᴍʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs.
+➪ [🌈](https://telegra.ph/file/21a7c5c3b87918ac464eb.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
+➪ *I'Am An Music + Managment Bot*
+➪ *Am Very Fast Awesome Features* 
+───────────────────────
+× *Uptime:* {}
+× {} *User, Across* {} *Chats.*
+───────────────────────
+⛦➪ *Thanks for useing my bots !*
 """
 buttons = [
-    [
-        InlineKeyboardButton(text="🔰 About Me", callback_data="Nao_"),
+    [      
+        InlineKeyboardButton(text="[►Assistant", callback_data="yurikorobot_asst"),
         InlineKeyboardButton(
-            text="Basic help ❔", callback_data="Nao_basichelp"
+            text="Inline ◄]", switch_inline_query_current_chat=""
         ),
     ],
     [
-        InlineKeyboardButton(text="🚑 Support", url=f"https://t.me/BLAZE_SUPPORT"),
-      InlineKeyboardButton(
-          text="Updates 📨", url=f"https://t.me/the_BLAZE_Network"
-      ),
-  ],
-  [
-      InlineKeyboardButton(text="🔐 Help Cmd", callback_data="help_back"),
-      InlineKeyboardButton(
-          text="Chitchat 🚑", url=f"https://t.me/UNIQUE_SOCIETY"
-      ),
-  ],
-  [
-      InlineKeyboardButton(
-          text="➕ Add me to Group ➕", url="t.me/HYPERMEN_RBOT?startgroup=true"),
-  ],
+        InlineKeyboardButton(text="[► About Me ", callback_data="yurikorobot_"),
+        InlineKeyboardButton(
+            text="Help Cmd◄]", callback_data="help_back"
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="[►Add me Group◄]", url="http://t.me/Hypermen_rbot?startgroup=true"),
+    ],
 ]
 
 HELP_STRINGS = """
-*Main* commands available:
- ➛ /help: PM's you this message.
- ➛ /help <module name>: PM's you info about that module.
- ➛ /donate: information on how to donate!
- ➛ /settings:
-   ❂ in PM: will send you your settings for all supported modules.
-   ❂ in a group: will redirect you to pm, with all that chat's settings.
-"""
+*➪ MAIN COMMANDS ➪*
 
-DONATE_STRING = """❂ I'm Free for Everyone ❂"""
+➪ /start - `Starts me! Your probably already used this.`
+➪ /help - `Click this I ll let you know about myself!`
+➪ /settings - `in PM: will send you your settings for all supported modules.`
+➪ *In A Group: Will Redirect You To Pm With All That Chats Settings.*"""
+
+
+
+DONATE_STRING = """Heya, glad to hear you want to donate!
+ @Log_afk 💕"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -176,7 +181,7 @@ def send_help(chat_id, text, keyboard=None):
     )
 
 
-@run_async
+
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
     # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
@@ -184,7 +189,7 @@ def test(update: Update, context: CallbackContext):
     print(update.effective_message)
 
 
-@run_async
+
 def start(update: Update, context: CallbackContext):
     args = context.args
     uptime = get_readable_time((time.time() - StartTime))
@@ -217,19 +222,29 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
+            first_name = update.effective_user.first_name
             update.effective_message.reply_text(
-                PM_START_TEXT,
+                PM_START_TEXT.format(
+                    escape_markdown(first_name),
+                    escape_markdown(uptime),
+                    sql.num_users(),
+                    sql.num_chats()),                        
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
+                disable_web_page_preview=False,
             )
     else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+        update.effective_message.reply_photo(
+            yurikorobot_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/UNIQUE_SOCIETY")]]
+            ),
         )
+
         
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -289,7 +304,7 @@ def error_callback(update: Update, context: CallbackContext):
         # handle all other telegram related errors
 
 
-@run_async
+
 def help_button(update, context):
     query = update.callback_query
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
@@ -303,7 +318,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "Here is the help for the *{}* module:\n".format(
+                "`Hᴇʀᴇ Iꜱ Tʜᴇ Hᴇʟᴘ`「*{}*」 `Mᴏᴅᴜʟᴇ:`\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -354,47 +369,53 @@ def help_button(update, context):
         pass
 
 
-@run_async
-def Nao_about_callback(update, context):
+
+def yurikorobot_about_callback(update, context):
     query = update.callback_query
-    if query.data == "Nao_":
+    if query.data == "yurikorobot_":
         query.message.edit_text(
-            text=""" ᴀ ᴘᴏᴡᴇʀғᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ
-            \nHere's the basic help regarding use of Hypermen robot.
+            text=""" *Hyper* - `A bot to manage your groups with additional features!`
+            \n`Here the basic help regarding use of Hyperrobot.`
             
-            \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
-            \nReport error/bugs click the Button""",
+            \n`Almost all modules usage defined in the help menu, checkout by sending` `/help`
+            \n`Report error/bugs click the Button`""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="💫 Sᴜᴘᴘᴏʀᴛ", url="t.me/HYPERMEN_SUPPORT"
+                            text="Bᴜɢ'ꜱ", url="t.me/Official_afk_xD"
                         ),
                         InlineKeyboardButton(
-                            text="✨ Uᴘᴅᴀᴛᴇ", url="t.me/HYPERMEN_UPDATES"
+                            text="Bᴏᴛ Lɪꜱᴛ", url="https://t.me/Team_Blaze_xD"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="Nao_back")],
+                    [InlineKeyboardButton(text="Back", callback_data="yurikorobot_back")],
                 ]
             ),
         )
-    elif query.data == "Nao_back":
+    elif query.data == "yurikorobot_back":
+        first_name = update.effective_user.first_name
+        uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-                PM_START_TEXT,
+                PM_START_TEXT.format(
+                    escape_markdown(first_name),
+                    escape_markdown(uptime),
+                    sql.num_users(),
+                    sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
                 disable_web_page_preview=False,
         )
-
-    elif query.data == "Nao_basichelp":
+    elif query.data == "yurikorobot_basichelp":
         query.message.edit_text(
             text=f"*Here's basic Help regarding* *How to use Me?*"
-            f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
-            f"\n• After adding promote me manually with full rights for faster experience.\n"
-            f"\n• Than send `/admincache @Hypermen_rBot` in that chat to refresh admin list in My database.\n"
+            
+            f"\n\n➪ `Firstly Add` {dispatcher.bot.first_name} `to your group by pressing` [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            f"\n➪ `After adding promote me manually with full rights for faster experience.`\n"
+            f"\n➪ `Than send` `/admincache@Hypermen_rbot` `in that chat to refresh admin list in My database.`\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -402,112 +423,87 @@ def Nao_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Aᴅᴍɪɴs⏳", callback_data="Nao_admin"),
-                    InlineKeyboardButton(text="Nᴏᴛᴇs 📝", callback_data="Nao_notes"),
+                    InlineKeyboardButton(text="Aᴅᴍɪɴ", callback_data="yurikorobot_admin"),
+                    InlineKeyboardButton(text="Nᴏᴛᴇꜱ", callback_data="yurikorobot_notes"),  
                  ],
                  [
-                    InlineKeyboardButton(text="⚡ Sᴜᴘᴘᴏʀᴛ", callback_data="Nao_support"),
-                    InlineKeyboardButton(text="🧰 Cʀᴇᴅɪᴛs ", callback_data="Nao_credit"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="🌹Bᴀᴄᴋ🌹", callback_data="Nao_back"),
+                    InlineKeyboardButton(text="Back", callback_data="yurikorobot_back"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "Nao_admin":
+    elif query.data == "yurikorobot_admin":
         query.message.edit_text(
-            text=f"*Let's make your group bit effective now*"
-            f"\nCongragulations, HYPERMEN now ready to manage your group."
+            text=f"*Let's Make Your Group Bit Effective Now*"
+            
+            f"\n➪ `Congragulations, HypermenRobot now ready to manage your group.`"
             f"\n\n*Admin Tools*"
-            f"\nBasic Admin tools help you to protect and powerup your group."
-            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
+            f"\n➪ `Basic Admin tools help you to protect and powerup your group.`"
+            f"\n➪ `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
             f"\n\n*Welcome*"
-            f"\nLets set a welcome message to welcome new users coming to your group."
-            f"send `/setwelcome [message]` to set a welcome message!",
+            f"\n➪ `Lets set a welcome message to welcome new users coming to your group.`"
+            f"\n➪ `send` `/setwelcome [message]` `to set a welcome message!`",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="Nao_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
             ),
         )
-    elif query.data == "Nao_notes":
+
+    elif query.data == "yurikorobot_notes":
         query.message.edit_text(
-            text=f"<b> Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            text=f"<b> Setting Up Notes</b>"
+            
+            f"\n`➪ You can save message/media/audio or anything as notes`"
+            f"\n`➪ to get a note simply use` # `at the beginning of a word`"
+            f"\n\n`➪ You can also set buttons for notes and filters (refer help menu)`",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="Nao_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
             ),
         )
-    elif query.data == "Nao_support":
+    elif query.data == "yurikorobot_asst":
         query.message.edit_text(
-            text="* Hypermen support chats*"
-            "\nJoin Support Group/Channel",
+            text=f"*Hᴇʀᴇ Iꜱ Tʜᴇ Hᴇʟᴘ 「Aꜱꜱɪꜱᴛᴀɴᴛ」 Mᴏᴅᴜʟᴇ:*"
+            
+            f"\n*SETUP ASSISTANT*"
+            f"\n\n➪ `1.) first, add me to your group.`"
+            f"\n\n➪ `2.) then promote me as admin and give all permissions except anonymous admin.`"
+            f"\n\n➪ `3.) add` @HypermenAssistant `to your group:`"
+            f"\n\n➪ `4.) turn on the video chat first before start to play music.`"
+            f"\n\n➪ *Lets Enjoy The Yuriko Music And Join Support Group @Hypermen_Support*"
+            f"\n\n*⛦➪ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: @Official_Afk_xD !*",
             parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Tғɴ Fᴏᴜɴᴅᴇʀ", url="t.me/yash_thakur_9"),
-                    InlineKeyboardButton(text="Tғɴ CᴏFᴏᴜɴᴅᴇʀ", url="t.me/Harsh_Pandit_xd"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Tғɴ Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Furious_Support_Group"),
-                    InlineKeyboardButton(text="Tғɴ Uᴘᴅᴀᴛᴇ", url="https://t.me/THE_FURIOUSNETWORK"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="Nao_basichelp"),
-                 
-                 ]
-                ]
+                [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_back")]]
             ),
         )
-
-    elif query.data == "Nao_credit":
+    elif query.data.data == "yurikorobot_admin":
         query.message.edit_text(
-            text=f"💫 Credis for TFN\n"
-            "\nHere Developers Making And Give Inspiration For Made The HypermenRobot",
+            text=f"*Let's Make Your Group Bit Effective Now*"
+            
+            f"\n➪ `Congragulations, HperRobot now ready to manage your group.`"
+            f"\n\n*Admin Tools*"
+            f"\n➪ `Basic Admin tools help you to protect and powerup your group.`"
+            f"\n➪ `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
+            f"\n\n*Welcome*"
+            f"\n➪ `Lets set a welcome message to welcome new users coming to your group.`"
+            f"\n➪ `send` `/setwelcome [message]` `to set a welcome message!`",
             parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Hᴀʀsʜ", url="https://t.me/harsh_Pandit_xd"),
-                    InlineKeyboardButton(text="Yᴀsʜ", url="https://t.me/YASH_THAKUR_9"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Eᴠɪʟ Bᴏʏ", url="https://t.me/evil_Xd_boy"),
-                    InlineKeyboardButton(text="Aɴᴅʏ", url="https://t.me/Its_pandit_boy"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Aʏᴀɴ", url="https://t.me/ayu6099"),
-                    InlineKeyboardButton(text="Tʜᴏʀ", url="https://t.me/Thor_0Z"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Dɪᴠʏᴀɴsʜ", url="https://t.me/THE_KING_IS_BACK78"),
-                    InlineKeyboardButton(text="Vɪᴊᴀʏ", url="https://t.me/MRVIJAYU1614"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Nɪsʜᴀɴᴛ", url="https://t.me/NISHANTT_XD"),
-                    InlineKeyboardButton(text="Asʜ ᴋɪɴɢ", url="https://t.me/Official_afk_xD"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="Nao_"),
-                 ]
-                ]
+                [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
             ),
-        )
-
-
-@run_async
+        )    
+            
 def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi.. there I'm *Hypermen Robot*
-                 \nHere is the [Source Code](https://t.me/BLAZE_SUPPORT) .""",
+            text=""" Hi..😻 I'm *Hypermenrobot*
+                 \nHere is the [🔥Source Code🔥](https://github.com/Official-afk-xD) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -527,7 +523,7 @@ def Source_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-@run_async
+
 def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
     args = update.effective_message.text.split(None, 1)
@@ -558,14 +554,14 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Hᴇʟᴘ ❔",
+                            text="[► Hᴇʟᴘ & Cᴍᴅ ◄]",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ",
-                            url="https://t.me/UNIQUE_SOCIETY".format(SUPPORT_CHAT),
+                            text="[►Dᴇᴠᴇʟᴏᴘᴇʀ◄]",
+                            url="https://t.me/{}".format(SUPPORT_CHAT),
                         )
                     ],
                 ]
@@ -634,7 +630,7 @@ def send_settings(chat_id, user_id, user=False):
             )
 
 
-@run_async
+
 def settings_button(update: Update, context: CallbackContext):
     query = update.callback_query
     user = update.effective_user
@@ -718,7 +714,7 @@ def settings_button(update: Update, context: CallbackContext):
             LOGGER.exception("Exception in settings buttons. %s", str(query.data))
 
 
-@run_async
+
 def get_settings(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -734,7 +730,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings",
+                                text="Support",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -750,7 +746,7 @@ def get_settings(update: Update, context: CallbackContext):
         send_settings(chat.id, user.id, True)
 
 
-@run_async
+
 def donate(update: Update, context: CallbackContext):
     user = update.effective_message.from_user
     chat = update.effective_chat  # type: Optional[Chat]
@@ -808,7 +804,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yess I'm alive ")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am Alive Baby 😃](https://telegra.ph/file/d7242c91acc99796e262a.jpg)", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
@@ -825,12 +821,13 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(Nao_about_callback, pattern=r"Nao_")
+    about_callback_handler = CallbackQueryHandler(yurikorobot_about_callback, pattern=r"yurikorobot_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
+
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
-    # dispatcher.add_handler(test_handler)
+    dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(about_callback_handler)
@@ -854,7 +851,7 @@ def main():
 
     else:
         LOGGER.info("Using long polling.")
-        updater.start_polling(timeout=15, read_latency=4, clean=True)
+        updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
 
     if len(argv) not in (1, 3, 4):
         telethn.disconnect()
