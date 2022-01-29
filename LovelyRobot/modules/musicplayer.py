@@ -17,6 +17,6 @@ __help__ = """
 ❍ /userbotjoin - invite assistant to your chat
 ❍ /admincache - Refresh admin list
 =>>   *Use*
-1) Add @HyperAssistant in your group to admin with all permission
+1) Add @Hyper_Assistant in your group to admin with all permission
 2) Assistant Auto Join Send /play Command First Tme By Owner
 """
