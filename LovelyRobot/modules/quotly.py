@@ -726,7 +726,7 @@ async def q(event):
 
     
 
-__mod_name__ = "ǫᴜᴏᴛʟʏ🕴️"
+__mod_name__ = "Quotly🕴️"
 
 __help__ = """
 
