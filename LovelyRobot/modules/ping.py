@@ -3,7 +3,7 @@ from typing import List
 
 import requests
 from telegram import ParseMode, Update
-
+from telegram.ext import CallbackContext, run_async
 
 from LovelyRobot import StartTime, dispatcher
 from LovelyRobot.modules.helper_funcs.chat_status import sudo_plus
@@ -68,6 +68,7 @@ def ping_func(to_ping: List[str]) -> List[str]:
     return ping_result
 
 
+@run_async
 @sudo_plus
 def ping(update: Update, context: CallbackContext):
     msg = update.effective_message
@@ -79,13 +80,14 @@ def ping(update: Update, context: CallbackContext):
     uptime = get_readable_time((time.time() - StartTime))
 
     message.edit_text(
-        "<b>PONG</b> \n"
+        "PONG!!\n"
         "<b>Time Taken:</b> <code>{}</code>\n"
-        "<b>Service Uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
+        "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
     )
 
 
+@run_async
 @sudo_plus
 def pingall(update: Update, context: CallbackContext):
     to_ping = ["Kaizoku", "Kayo", "Telegram", "Jikan"]
@@ -102,8 +104,8 @@ def pingall(update: Update, context: CallbackContext):
     )
 
 
-PING_HANDLER = DisableAbleCommandHandler("ping", ping, run_async=True)
-PINGALL_HANDLER = DisableAbleCommandHandler("pingall", pingall, run_async=True)
+PING_HANDLER = DisableAbleCommandHandler("ping", ping)
+PINGALL_HANDLER = DisableAbleCommandHandler("pingall", pingall)
 
 dispatcher.add_handler(PING_HANDLER)
 dispatcher.add_handler(PINGALL_HANDLER)
