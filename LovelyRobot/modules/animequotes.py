@@ -28,7 +28,7 @@ ANIMEQUOTES_HANDLER = DisableAbleCommandHandler("fun", fun)
 
 dispatcher.add_handler(ANIMEQUOTES_HANDLER)
 
-__mod_name__ = "Hindi ᴍᴇᴍᴇs"
+__mod_name__ = "Hindi Memes"
 __command_list__ = [
     "fun"
 ]
