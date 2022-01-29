@@ -645,7 +645,7 @@ Group admins/group owners do not need these commands.
  ❍ /logs Get heroku dyno logs.
 
 `⚠️ Read from top`
-Visit *@Blaze_Support* for more information.
+Visit *@BLAZE_SUPPORT* for more information.
 """
 
 SUDO_HANDLER = CommandHandler(("addsudo", "adddragon"), addsudo)
@@ -678,7 +678,7 @@ dispatcher.add_handler(SUPPORTLIST_HANDLER)
 dispatcher.add_handler(SUDOLIST_HANDLER)
 dispatcher.add_handler(DEVLIST_HANDLER)
 
-__mod_name__ = "ᴅᴇᴠ🦁"
+__mod_name__ = "Dev 🦁"
 __handlers__ = [
     SUDO_HANDLER,
     SUPPORT_HANDLER,
