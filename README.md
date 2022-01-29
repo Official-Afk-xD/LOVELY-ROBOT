@@ -9,13 +9,8 @@ Read [Docs](https://Official-afk-xD.gitbook.io/Lovely_Robot/deployment/requireme
 > Click on buttons to expand!
 <details>
 
-
-
-<details>
-<summary><b>🔗 String Session</b></summary>
-<br>
     
-> You'll need a [API_ID](https://notreallyshikhar.gitbook.io/yukkimusicbot/vars/mandatory-vars#1.-api_id) & [API_HASH](https://notreallyshikhar.gitbook.io/yukkimusicbot/vars/mandatory-vars#2.-api_hash) in order to generate pyrogram session. 
+> You'll need a [API_ID](https://Official-afk-xD.gitbook.io/LOVELY-Robot/vars/mandatory-vars#1.-api_id) & [API_HASH](https://Official-afk-xD.gitbook.io/Lovely-Robot/vars/mandatory-vars#2.-api_hash) in order. 
 > Always remeber to use good API combo else your account could be deleted.
 
 </details>
@@ -37,46 +32,15 @@ Read [Docs](https://Official-afk-xD.gitbook.io/Lovely_Robot/deployment/requireme
 <summary><b>🔗 Deploy to VPS</b></summary>
 <br>
 
-> Checkout [Docs](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/local-hosting-or-vps) for Detailed Explanation on VPS Deploy
+> Checkout [Docs](https://Official-afk-xD.gitbook.io/lovely-robot/deployment/local-hosting-or-vps) for Detailed Explanation on VPS Deploy
 
 
-```console
-shikhar@MacBook~ $ git clone https://github.com/notreallyshikhar/YukkiMusicBot
-shikhar@MacBook~ $ cd YukkiMusicBot
-shikhar@MacBook~ $ pip3 install -U -r requirements.txt
-shikhar@MacBook~ $ cp sample.env .env
-```
-> Edit .env with your values and then start bot with
-```console
-shikhar@MacBook~ $ bash start
-```
 
-> Not Getting VPS Method? [Watch Tutorial](https://t.me/OfficialYukki/2275)
+> Support Group ? [Watch Tutorial](https://t.me/Blaze_Support/2275)
 </details>
-
-## Config Vars
-
-- Checkout All [Available Vars](https://notreallyshikhar.gitbook.io/yukkimusicbot/vars/available-vars)
-- Checkout Only [Mandatory Vars](https://notreallyshikhar.gitbook.io/yukkimusicbot/vars/mandatory-vars)
-- Checkout Some [Configs](https://notreallyshikhar.gitbook.io/yukkimusicbot/setup-config/config)
 
 ## Contact & Support
 
-- [Telegram Channel](https://t.me/OfficialYukki)
-- [Telegram Support Group](https://t.me/OfficialYukkiSupport)
-- [Contact Owner](https://t.me/NotReallyShikhar)
-
-
-## License
-
-Distributed under the [GNU General Public License v3.0 License.](https://github.com/notreallyshikhar/YukkiMusicBot/blob/main/LICENSE) See `LICENSE.md` for more information.
-
-## Acknowledgements
-
-Special thanks to these amazing projects/people which/who help power Yukki Music Bot:
-
-- [Pyrogram](https://github.com/pyrogram/pyrogram)
-- [Py-Tgcalls](https://github.com/pytgcalls/pytgcalls)
-- [CallsMusic Team](https://github.com/Callsmusic)
-- [TheHamkerCat](https://github.com/TheHamkerCat)
-- [Charon Baglari](https://github.com/XCBv021)
+- [Telegram Channel](https://t.me/the_Blaze_Network)
+- [Telegram Support Group](https://t.me/Blaze_support)
+- [Contact Owner](https://t.me/log_afk)
