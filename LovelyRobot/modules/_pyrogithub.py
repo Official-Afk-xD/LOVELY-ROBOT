@@ -5,7 +5,7 @@ from LovelyRobot import pbot
 from LovelyRobot.pyrogramee.errors import capture_err
 
 
-__mod_name__ = "ɢɪᴛʜᴜʙ📡"
+__mod_name__ = "Github 🚀"
 
 __help__ = """
 I will give information about github profile 
