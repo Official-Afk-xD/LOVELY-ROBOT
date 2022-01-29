@@ -101,7 +101,7 @@ buttons = [
     [
         InlineKeyboardButton(text="🔐 Help & Cmd", callback_data="help_back"),
       InlineKeyboardButton(
-          text="Inline ⚡", switch_inline_query_current_chat=""
+          text="Developer ⭐", url=f"t.me/log_afk"
       ),
   ],
   [
@@ -112,7 +112,7 @@ buttons = [
   ],
   [
       InlineKeyboardButton(
-          text="➕ Add me to Group ➕", url="t.me/Lovely_ro_bot?startgroup=true"),
+          text="➕ Add me to your Group ➕", url="t.me/Lovely_ro_bot?startgroup=true"),
   ],
 ]
 
