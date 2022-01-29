@@ -3,7 +3,7 @@ from typing import List
 
 import requests
 from telegram import ParseMode, Update
-from telegram.ext import CallbackContext, run_async
+
 
 from LovelyRobot import StartTime, dispatcher
 from LovelyRobot.modules.helper_funcs.chat_status import sudo_plus
