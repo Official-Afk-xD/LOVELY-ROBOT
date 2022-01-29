@@ -20,11 +20,9 @@ A Powerful Telegram Group Managment Bot ,It comes with  user friendly and easy t
 <h4>Click the button below to deploy LOVELY on Heroku!</h4>    
 <h1>
     <p align="center">
-        <a href="https://heroku.com/deploy?template=https://github.com/OFFICIAL-AFK-XD/Lovely-Robot">
+        <a href="https://heroku.com/deploy?template=https://github.com/OFFICIAL-AFK-XD/Lovely_Robot">
             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 
-
-> Checkout [Docs](https://Official-afk-xD.gitbook.io/lovely-robot/deployment/local-hosting-or-vps) for Detailed Explanation on VPS Deploy
 
 
 
