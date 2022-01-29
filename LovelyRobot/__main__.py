@@ -99,7 +99,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="[► About Me ", callback_data="yurikorobot_"),
+        InlineKeyboardButton(text="[► About Me ", callback_data="LovelyRobot"),
         InlineKeyboardButton(
             text="Help Cmd◄]", callback_data="help_back"
         ),
@@ -371,9 +371,9 @@ def help_button(update, context):
 
 
 @run_async
-def Nao_about_callback(update, context):
+def LovelyRobot_about_callback(update, context):
     query = update.callback_query
-    if query.data == "Nao_":
+    if query.data == "LovelyRobot_":
         query.message.edit_text(
             text=""" ᴀ ᴘᴏᴡᴇʀғᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ
             \nHere's the basic help regarding use of Hypermen robot.
@@ -392,11 +392,11 @@ def Nao_about_callback(update, context):
                             text="✨ Uᴘᴅᴀᴛᴇ", url="t.me/HYPERMEN_UPDATES"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="Nao_back")],
+                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_back")],
                 ]
             ),
         )
-    elif query.data == "yurikorobot_back":
+    elif query.data == "LovelyRobot_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -410,7 +410,7 @@ def Nao_about_callback(update, context):
                 timeout=60,
                 disable_web_page_preview=False,
         )
-    elif query.data == "Nao_basichelp":
+    elif query.data == "LovelyRobot_basichelp":
         query.message.edit_text(
             text=f"*Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
@@ -423,21 +423,21 @@ def Nao_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Aᴅᴍɪɴs⏳", callback_data="Nao_admin"),
-                    InlineKeyboardButton(text="Nᴏᴛᴇs 📝", callback_data="Nao_notes"),
+                    InlineKeyboardButton(text="Aᴅᴍɪɴs⏳", callback_data="LovelyRobot_admin"),
+                    InlineKeyboardButton(text="Nᴏᴛᴇs 📝", callback_data="LovelyRobot_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="⚡ Sᴜᴘᴘᴏʀᴛ", callback_data="Nao_support"),
-                    InlineKeyboardButton(text="🧰 Cʀᴇᴅɪᴛs ", callback_data="Nao_credit"),
+                    InlineKeyboardButton(text="⚡ Sᴜᴘᴘᴏʀᴛ", callback_data="LovelyRobot_support"),
+                    InlineKeyboardButton(text="🧰 Cʀᴇᴅɪᴛs ", callback_data="LovelyRobot_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="🌹Bᴀᴄᴋ🌹", callback_data="Nao_back"),
+                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_back"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "Nao_admin":
+    elif query.data == "LovelyRobot_admin":
         query.message.edit_text(
             text=f"*Let's make your group bit effective now*"
             f"\nCongragulations, HYPERMEN now ready to manage your group."
@@ -450,11 +450,11 @@ def Nao_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="Nao_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="LovelyRobot_basichelp")]]
             ),
         )
 
-    elif query.data == "Nao_notes":
+    elif query.data == "LovelyRobot_notes":
         query.message.edit_text(
             text=f"<b> Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -462,10 +462,10 @@ def Nao_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="Nao_basichelp")]]
+                [[InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_basichelp")]]
             ),
         )
-    elif query.data == "Nao_support":
+    elif query.data == "LovelyRobot_support":
         query.message.edit_text(
             text="* Hypermen support chats*"
             "\nJoin Support Group/Channel",
@@ -481,16 +481,16 @@ def Nao_about_callback(update, context):
                     InlineKeyboardButton(text="Tғɴ Uᴘᴅᴀᴛᴇ", url="https://t.me/THE_FURIOUSNETWORK"),
                  ],
                  [
-                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="Nao_basichelp"),
+                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_basichelp"),
                  
                  ]
                 ]
             ),
         )
 
-    elif query.data == "Nao_credit":
+    elif query.data == "LovelyRobot_credit":
         query.message.edit_text(
-            text=f"💫 Credis for TFN\n"
+            text=f"💫 Credis for Lovely\n"
             "\nHere Developers Making And Give Inspiration For Made The HypermenRobot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -516,7 +516,7 @@ def Nao_about_callback(update, context):
                     InlineKeyboardButton(text="Asʜ ᴋɪɴɢ", url="https://t.me/Official_afk_xD"),
                  ],
                  [
-                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="Nao_"),
+                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_"),
                  ]
                 ]
             ),
