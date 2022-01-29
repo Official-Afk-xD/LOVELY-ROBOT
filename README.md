@@ -17,13 +17,16 @@ A Powerful Telegram Group Managment Bot ,It comes with  user friendly and easy t
 <details>
 <summary><b>🔗 Deploy to Heroku</b></summary>
 <br>
-https://railway.app/new/template?template=https://github.com/Official-afk-xD/Lovely-Robot
+
 > Heroku has two vars[ HEROKU_API_KEY & HEROKU_APP_NAME ] for Updater to work. 
 > By setting those two vars you can get logs of your heroku app, set var, edit var, delete vars , check dyno usage and update bot. 
 > Those two vars are not Mandatory! You can leave them blank too. 
     
 <h4>Click the button below to deploy LOVELY on Heroku!</h4>    
-<p><a href="https://vegetaxd.me/lovely"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-green?style=for-the-badge&logo=heroku" width="200""/></a></p>
+<h1>
+    <p align="center">
+        <a href="https://heroku.com/deploy?template=https://github.com/OFFICIAL-AFK-XD/Lovely-Robot">
+            <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
     
 </details>
 
