@@ -24,11 +24,6 @@ A Powerful Telegram Group Managment Bot ,It comes with  user friendly and easy t
             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 
 
-
-
-> Support Group ? [Watch Tutorial](https://t.me/Blaze_Support/2275)
-</details>
-
 ## Contact & Support
 
 - [Telegram Channel](https://t.me/the_Blaze_Network)
