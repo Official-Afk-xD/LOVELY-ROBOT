@@ -4,7 +4,7 @@ import glob
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos
 from LovelyRobot.events import register
-from LovelyRobot import telethn as tbot, ubot2
+
 
 
 def mediainfo(media):
