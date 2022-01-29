@@ -2,7 +2,7 @@
     
 # Lovely Robot
 
-  <a href="https://www.python.org/" alt="made-with-python"> <img src="https://telegra.ph/file/09314a3492d7e68489b75.jpg" /> </a>
+  <a href="https://www.python.org/" alt="made-with-python"> <img src="https://telegra.ph/file/e90a902caccf00f2c6ca1.jpg" /> </a>
 A Powerful Telegram Group Managment Bot ,It comes with  user friendly and easy to use yet elegant features.
 
 ## Deployment
@@ -16,9 +16,6 @@ A Powerful Telegram Group Managment Bot ,It comes with  user friendly and easy t
 <summary><b>🔗 Deploy to Heroku</b></summary>
 <br>
 
-> Heroku has two vars[ HEROKU_API_KEY & HEROKU_APP_NAME ] for Updater to work. 
-> By setting those two vars you can get logs of your heroku app, set var, edit var, delete vars , check dyno usage and update bot. 
-> Those two vars are not Mandatory! You can leave them blank too. 
     
 <h4>Click the button below to deploy LOVELY on Heroku!</h4>    
 <h1>
