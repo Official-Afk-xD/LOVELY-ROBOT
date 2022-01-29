@@ -1,57 +1,96 @@
- <h1 align="center"><b>Lovely Robot </b></h1>
+</p>
+    
+# Yukki Music Bot
+A Powerful Telegram Music+Video Bot by which you can stream songs, videos and even live streams in your group calls via various sources. It comes with  user friendly and easy to use yet elegant features.
 
-<h4 align="center">A Powerful, Smart And Advance Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
-<p align='center'>
-  <a href="https://www.python.org/" alt="made-with-python"> <img src="https://telegra.ph/file/09314a3492d7e68489b75.jpg" /> </a>
+## Deployment
+Read [Docs](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/requirements) for Detailed Description and Setup Guide on deploying Bot.
 
-<p align="center"><a href="https://t.me/Blaze_support"><img src="nh" width="400"></a></p>
-
-
-> ⭐️ Thanks to everyone who starred our projects,
- That is the greatest pleasure we have !
-
-# ❤️ Support
-<a href="https://t.me/blaze_Support"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-
-<a href="https://t.me/the_blaze_Network"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
-
-
-
-### ✪ Owners
-- [🔥 OFFICIAL AFK🔥](https://t.me/LOG_AFK) » [GitHub](https://github.com/OFFICIAL-AFK-XD) (Bot Founder)
-
-
-  <h1>
-    <p align="center">
-        <a href="https://heroku.com/deploy?template=https://github.com/OFFICIAL-AFK-XD/Lovely-Robot">
-            <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-        </a>
-    </p>
-</h1>
-
-</details> 
+> Click on buttons to expand!
+<details>
+<summary><b>🔗 Requirements</b></summary>
+<br>
+    
+- [Python3.9](https://www.python.org/downloads/release/python-390/)
+- [Telegram API Key](https://docs.pyrogram.org/intro/setup#api-keys)
+- [Telegram Bot Token](https://t.me/botfather)
+- [MongoDB URI](https://telegra.ph/How-To-get-Mongodb-URI-04-06)
+- [Pyrogram String Session](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/string-session)
+    
+</details>
 
 <details>
-	<summary>Railway Deploy</summary>
-	<br>
-	<b>
-The Unlimited Dyons to Deploy This Bot is Via Railway.
-		In Order To deploy, You Just add The Variables Manually in Railway and Done!</b>
-	
-  <h1>
-    <p align="center">
-        <a href="https://railway.app/new/template?template=https://github.com/Official-afk-xD/Lovely-Robot">
-            <img src="https://railway.app/button.svg" alt="Deploy">
-        </a>
-    </p>
-</h1>
+<summary><b>🔗 String Session</b></summary>
+<br>
+    
+> You'll need a [API_ID](https://notreallyshikhar.gitbook.io/yukkimusicbot/vars/mandatory-vars#1.-api_id) & [API_HASH](https://notreallyshikhar.gitbook.io/yukkimusicbot/vars/mandatory-vars#2.-api_hash) in order to generate pyrogram session. 
+> Always remeber to use good API combo else your account could be deleted.
+
+<h4> Generate Session via Repl: </h4>    
+<p><a href="https://replit.com/@NotReallyShikhar/Yukki-Music-String-Gen"><img src="https://img.shields.io/badge/Generate%20On%20Repl-blueviolet?style=for-the-badge&logo=appveyor" width="200""/></a></p>
+
+<h4> Generate Session via Telegram StringGen Bot: </h4>    
+<p><a href="https://t.me/YukkiStringBot"><img src="https://img.shields.io/badge/TG%20String%20Gen%20Bot-blueviolet?style=for-the-badge&logo=appveyor" width="200""/></a></p>
+    
+</details>
+
+<details>
+<summary><b>🔗 Deploy to Heroku</b></summary>
+<br>
+
+> Heroku has two vars[ HEROKU_API_KEY & HEROKU_APP_NAME ] for Updater to work. 
+> By setting those two vars you can get logs of your heroku app, set var, edit var, delete vars , check dyno usage and update bot. 
+> Those two vars are not Mandatory! You can leave them blank too. 
+    
+<h4>Click the button below to deploy Yukki on Heroku!</h4>    
+<p><a href="https://vegetaxd.me/Yukki"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
+    
+</details>
+
+<details>
+<summary><b>🔗 Deploy to VPS</b></summary>
+<br>
+
+> Checkout [Docs](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/local-hosting-or-vps) for Detailed Explanation on VPS Deploy
 
 
-### ✪ Supporters
-- no one -_-
+```console
+shikhar@MacBook~ $ git clone https://github.com/notreallyshikhar/YukkiMusicBot
+shikhar@MacBook~ $ cd YukkiMusicBot
+shikhar@MacBook~ $ pip3 install -U -r requirements.txt
+shikhar@MacBook~ $ cp sample.env .env
+```
+> Edit .env with your values and then start bot with
+```console
+shikhar@MacBook~ $ bash start
+```
 
-## All who helped at a glance 
+> Not Getting VPS Method? [Watch Tutorial](https://t.me/OfficialYukki/2275)
+</details>
 
-> This project exists thanks to these awesome developers and their codes and contributions.
-> And credits goes to all who supported, all who helped and API & environmental equirement package devs and all projects helped in making this project.
-> Special thanks to you for using bot
+## Config Vars
+
+- Checkout All [Available Vars](https://notreallyshikhar.gitbook.io/yukkimusicbot/vars/available-vars)
+- Checkout Only [Mandatory Vars](https://notreallyshikhar.gitbook.io/yukkimusicbot/vars/mandatory-vars)
+- Checkout Some [Configs](https://notreallyshikhar.gitbook.io/yukkimusicbot/setup-config/config)
+
+## Contact & Support
+
+- [Telegram Channel](https://t.me/OfficialYukki)
+- [Telegram Support Group](https://t.me/OfficialYukkiSupport)
+- [Contact Owner](https://t.me/NotReallyShikhar)
+
+
+## License
+
+Distributed under the [GNU General Public License v3.0 License.](https://github.com/notreallyshikhar/YukkiMusicBot/blob/main/LICENSE) See `LICENSE.md` for more information.
+
+## Acknowledgements
+
+Special thanks to these amazing projects/people which/who help power Yukki Music Bot:
+
+- [Pyrogram](https://github.com/pyrogram/pyrogram)
+- [Py-Tgcalls](https://github.com/pytgcalls/pytgcalls)
+- [CallsMusic Team](https://github.com/Callsmusic)
+- [TheHamkerCat](https://github.com/TheHamkerCat)
+- [Charon Baglari](https://github.com/XCBv021)
