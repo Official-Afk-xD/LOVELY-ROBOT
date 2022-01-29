@@ -92,21 +92,28 @@ PM_START_TEXT = """
 ⛦➪ *Thanks for useing my bots !*
 """
 buttons = [
-    [      
-        InlineKeyboardButton(text="[►Assistant", callback_data="yurikorobot_asst"),
+    [
+        InlineKeyboardButton(text="🔰 About Me", callback_data="Nao_"),
         InlineKeyboardButton(
-            text="Inline ◄]", switch_inline_query_current_chat=""
+            text="Basic help ❔", callback_data="Nao_basichelp"
         ),
     ],
     [
-        InlineKeyboardButton(text="[► About Me ", callback_data="LovelyRobot"),
-        InlineKeyboardButton(
-            text="Help Cmd◄]", callback_data="help_back"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="[►Add me Group◄]", url="http://t.me/Hypermen_rbot?startgroup=true"),
-    ],
+        InlineKeyboardButton(text="🚑 Support", url=f"https://t.me/BLAZE_SUPPORT"),
+      InlineKeyboardButton(
+          text="Updates 📨", url=f"https://t.me/the_BLAZE_Network"
+      ),
+  ],
+  [
+      InlineKeyboardButton(text="🔐 Help Cmd", callback_data="help_back"),
+      InlineKeyboardButton(
+          text="Chitchat 🚑", url=f"https://t.me/UNIQUE_SOCIETY"
+      ),
+  ],
+  [
+      InlineKeyboardButton(
+          text="➕ Add me to Group ➕", url="t.me/HYPERMEN_RBOT?startgroup=true"),
+  ],
 ]
 
 HELP_STRINGS = """
