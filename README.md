@@ -8,10 +8,6 @@ A Powerful Telegram Group Managment Bot ,It comes with  user friendly and easy t
 > Click on buttons to expand!
 <details>
 
-    
-> You'll need a [API_ID](https://Official-afk-xD.gitbook.io/LOVELY-Robot/vars/mandatory-vars#1.-api_id) & [API_HASH](https://Official-afk-xD.gitbook.io/Lovely-Robot/vars/mandatory-vars#2.-api_hash) in order. 
-> Always remeber to use good API combo else your account could be deleted.
-
 </details>
 
 <details>
@@ -27,12 +23,7 @@ A Powerful Telegram Group Managment Bot ,It comes with  user friendly and easy t
     <p align="center">
         <a href="https://heroku.com/deploy?template=https://github.com/OFFICIAL-AFK-XD/Lovely-Robot">
             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-    
-</details>
 
-<details>
-<summary><b>🔗 Deploy to VPS</b></summary>
-<br>
 
 > Checkout [Docs](https://Official-afk-xD.gitbook.io/lovely-robot/deployment/local-hosting-or-vps) for Detailed Explanation on VPS Deploy
 
