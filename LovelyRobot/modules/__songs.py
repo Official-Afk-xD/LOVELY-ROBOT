@@ -98,7 +98,7 @@ import os
 import aiofiles
 import aiohttp
 from pyrogram import filters
-from TGNRobot import pbot as ASUNA
+from LovelyRobot import pbot as ASUNA
 
 ARQ = "https://thearq.tech/"
 
