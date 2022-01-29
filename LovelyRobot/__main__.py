@@ -93,9 +93,9 @@ PM_START_TEXT = """
 """
 buttons = [
     [
-        InlineKeyboardButton(text="🔰 About Me", callback_data="Nao_"),
+        InlineKeyboardButton(text="🔰 About Me", callback_data="LovelyRobot_"),
         InlineKeyboardButton(
-            text="Basic help ❔", callback_data="Nao_basichelp"
+            text="Basic help ❔", callback_data="LovelyRobot_basichelp"
         ),
     ],
     [
