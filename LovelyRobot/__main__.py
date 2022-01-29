@@ -79,11 +79,11 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-yurikorobot_IMG = "https://telegra.ph/file/21a7c5c3b87918ac464eb.jpg"
+LovelyRobot_IMG = "https://telegra.ph/file/e90a902caccf00f2c6ca1.jpg"
 
 PM_START_TEXT = """
-➪ [🌈](https://telegra.ph/file/21a7c5c3b87918ac464eb.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
-➪ *I'Am An Music + Managment Bot*
+➪ [🌈](https://telegra.ph/file/e90a902caccf00f2c6ca1.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
+➪ *I'Am An Anime themed advance group management bot*
 ➪ *Am Very Fast Awesome Features* 
 ───────────────────────
 × *Uptime:* {}
@@ -243,12 +243,12 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            yurikorobot_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            LovelyRobot_IMG, caption= "Heya, Lovely Robot Here.. How can help you?🙂\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/UNIQUE_SOCIETY")]]
+                [[InlineKeyboardButton(text="⛦ Support ⛦", url="t.me/UNIQUE_SOCIETY")]]
             ),
         )
 
@@ -382,21 +382,21 @@ def LovelyRobot_about_callback(update, context):
     query = update.callback_query
     if query.data == "LovelyRobot_":
         query.message.edit_text(
-            text=""" ᴀ ᴘᴏᴡᴇʀғᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ
-            \nHere's the basic help regarding use of Hypermen robot.
+            text="""➪ A ᴘᴏᴡᴇʀғᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ
+            \n➪ Here's the basic help regarding use of Lovely Robot.
             
-            \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
-            \nReport error/bugs click the Button""",
+            \n➪ Almost all modules usage defined in the help menu, checkout by sending `/help`
+            \n➪ Report error/bugs click the Button""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="💫 Sᴜᴘᴘᴏʀᴛ", url="t.me/HYPERMEN_SUPPORT"
+                            text="🚑 Support", url="t.me/Blaze_Support"
                         ),
                         InlineKeyboardButton(
-                            text="✨ Uᴘᴅᴀᴛᴇ", url="t.me/HYPERMEN_UPDATES"
+                            text="Updates 📢", url="t.me/the_Blaze_Network"
                         ),
                     ],
                     [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_back")],
@@ -419,26 +419,26 @@ def LovelyRobot_about_callback(update, context):
         )
     elif query.data == "LovelyRobot_basichelp":
         query.message.edit_text(
-            text=f"*Here's basic Help regarding* *How to use Me?*"
-            f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
-            f"\n• After adding promote me manually with full rights for faster experience.\n"
-            f"\n• Than send `/admincache @Hypermen_rBot` in that chat to refresh admin list in My database.\n"
-            f"\n\n*All done now use below given button's to know about use!*\n"
+            text=f"*➪ Here's basic Help regarding* *How to use Me?*"
+            f"\n\n➪ Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            f"\n➪ After adding promote me manually with full rights for faster experience.\n"
+            f"\n➪ Than send `/admincache @Lovely_Ro_bot` in that chat to refresh admin list in My database.\n"
+            f"\n\n*➪All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Aᴅᴍɪɴs⏳", callback_data="LovelyRobot_admin"),
-                    InlineKeyboardButton(text="Nᴏᴛᴇs 📝", callback_data="LovelyRobot_notes"),
+                    InlineKeyboardButton(text="⭐ Admins", callback_data="LovelyRobot_admin"),
+                    InlineKeyboardButton(text="Notes 🔰", callback_data="LovelyRobot_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="⚡ Sᴜᴘᴘᴏʀᴛ", callback_data="LovelyRobot_support"),
-                    InlineKeyboardButton(text="🧰 Cʀᴇᴅɪᴛs ", callback_data="LovelyRobot_credit"),
+                    InlineKeyboardButton(text="❔ Founder", callback_data="LovelyRobot_support"),
+                    InlineKeyboardButton(text="Credits ❗", callback_data="LovelyRobot_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_back"),
+                    InlineKeyboardButton(text="⛦ Back ⛦", callback_data="LovelyRobot_back"),
                  
                  ]
                 ]
@@ -446,49 +446,49 @@ def LovelyRobot_about_callback(update, context):
         )
     elif query.data == "LovelyRobot_admin":
         query.message.edit_text(
-            text=f"*Let's make your group bit effective now*"
-            f"\nCongragulations, HYPERMEN now ready to manage your group."
-            f"\n\n*Admin Tools*"
-            f"\nBasic Admin tools help you to protect and powerup your group."
-            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            f"\n\n*Welcome*"
-            f"\nLets set a welcome message to welcome new users coming to your group."
+            text=f"*⛦➪ Let's make your group bit effective now*"
+            f"\n➪ Congragulations, ⛦ Lovely ⛦ now ready to manage your group."
+            f"\n\n➪ *Admin Tools*"
+            f"\n➪ Basic Admin tools help you to protect and powerup your group."
+            f"\n➪ You can ban members, Kick members, Promote someone as admin through commands of bot."
+            f"\n\n⛦➪ *Welcome*"
+            f"\n➪ Lets set a welcome message to welcome new users coming to your group."
             f"send `/setwelcome [message]` to set a welcome message!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="LovelyRobot_basichelp")]]
+                [[InlineKeyboardButton(text="⛦ Back ⛦", callback_data="LovelyRobot_basichelp")]]
             ),
         )
 
     elif query.data == "LovelyRobot_notes":
         query.message.edit_text(
-            text=f"<b> Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            text=f"<b> ⛦➪ Setting up notes</b>"
+            f"\n➪ You can save message/media/audio or anything as notes"
+            f"\n➪ to get a note simply use # at the beginning of a word"
+            f"\n\n➪ You can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_basichelp")]]
+                [[InlineKeyboardButton(text="⛦ Back ⛦", callback_data="LovelyRobot_basichelp")]]
             ),
         )
     elif query.data == "LovelyRobot_support":
         query.message.edit_text(
-            text="* Hypermen support chats*"
-            "\nJoin Support Group/Channel",
+            text="* ⛦ Lovely support chats ⛦ *"
+            "\n➪ Join Support Group/Channel",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Tғɴ Fᴏᴜɴᴅᴇʀ", url="t.me/yash_thakur_9"),
-                    InlineKeyboardButton(text="Tғɴ CᴏFᴏᴜɴᴅᴇʀ", url="t.me/Harsh_Pandit_xd"),
+                    InlineKeyboardButton(text="⛦ Unique Society", url="t.me/UNIQUE_SOCIETY"),
+                    InlineKeyboardButton(text="Dear Comrade ⛦", url="t.me/all_Dear_COMRADE"),
                  ],
                  [
-                    InlineKeyboardButton(text="Tғɴ Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Furious_Support_Group"),
-                    InlineKeyboardButton(text="Tғɴ Uᴘᴅᴀᴛᴇ", url="https://t.me/THE_FURIOUSNETWORK"),
+                    InlineKeyboardButton(text="🚑 Support", url="https://t.me/Blaze_Support"),
+                    InlineKeyboardButton(text="Updates 📢", url="https://t.me/the_Blaze_Network"),
                  ],
                  [
-                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_basichelp"),
+                    InlineKeyboardButton(text="⛦ Back ⛦", callback_data="LovelyRobot_basichelp"),
                  
                  ]
                 ]
@@ -497,33 +497,21 @@ def LovelyRobot_about_callback(update, context):
 
     elif query.data == "LovelyRobot_credit":
         query.message.edit_text(
-            text=f"💫 Credis for Lovely\n"
-            "\nHere Developers Making And Give Inspiration For Made The HypermenRobot",
+            text=f"⛦➪ Credis for Lovely\n"
+            "\n➪ Here Developers Making And Give Inspiration For Made The Lovely Robot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Hᴀʀsʜ", url="https://t.me/harsh_Pandit_xd"),
-                    InlineKeyboardButton(text="Yᴀsʜ", url="https://t.me/YASH_THAKUR_9"),
+                    InlineKeyboardButton(text="⛦ Harsh Pandit", url="https://t.me/harsh_Pandit_xd"),
+                    InlineKeyboardButton(text="Evil Boy ⛦", url="https://t.me/EVIL_xd_boy"),
                  ],
                  [
-                    InlineKeyboardButton(text="Eᴠɪʟ Bᴏʏ", url="https://t.me/evil_Xd_boy"),
-                    InlineKeyboardButton(text="Aɴᴅʏ", url="https://t.me/Its_pandit_boy"),
+                    InlineKeyboardButton(text="⛦ Andy Pandit", url="https://t.me/Its_pandit_boy"),
+                    InlineKeyboardButton(text="Yash Thakur ⛦", url="https://t.me/Yash_thakuur"),                
                  ],
                  [
-                    InlineKeyboardButton(text="Aʏᴀɴ", url="https://t.me/ayu6099"),
-                    InlineKeyboardButton(text="Tʜᴏʀ", url="https://t.me/Thor_0Z"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Dɪᴠʏᴀɴsʜ", url="https://t.me/THE_KING_IS_BACK78"),
-                    InlineKeyboardButton(text="Vɪᴊᴀʏ", url="https://t.me/MRVIJAYU1614"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Nɪsʜᴀɴᴛ", url="https://t.me/NISHANTT_XD"),
-                    InlineKeyboardButton(text="Asʜ ᴋɪɴɢ", url="https://t.me/Official_afk_xD"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_"),
+                    InlineKeyboardButton(text="⛦ Back ⛦", callback_data="LovelyRobot_"),
                  ]
                 ]
             ),
@@ -533,14 +521,14 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Hypermenrobot*
-                 \nHere is the [🔥Source Code🔥](https://github.com/Official-afk-xD) .""",
+            text="""⛦➪ Hi..🙂 I'm *LovelyRobot*
+                 \n➪ Here is the [⛦ Source Code ⛦](https://github.com/Official-afk-xD/Lovely-Robot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="source_back")
+                    InlineKeyboardButton(text="⛦ Go Back ⛦", callback_data="source_back")
                  ]
                 ]
             ),
@@ -585,13 +573,13 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="[► Hᴇʟᴘ & Cᴍᴅ ◄]",
+                            text="⛦ Help & Cmd ⛦",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            text="[►Dᴇᴠᴇʟᴏᴘᴇʀ◄]",
+                            text="⛦ Developer ⛦",
                             url="https://t.me/{}".format(SUPPORT_CHAT),
                         )
                     ],
