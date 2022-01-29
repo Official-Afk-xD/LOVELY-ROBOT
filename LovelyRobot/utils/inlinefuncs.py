@@ -15,28 +15,23 @@ from pykeyboard import InlineKeyboard
 from pyrogram import __version__ as pyrover
 from pyrogram import filters
 from pyrogram.raw.functions import Ping
-from pyrogram.types import (
-    CallbackQuery,
-    InlineKeyboardButton,
-    InlineQueryResultArticle,
-    InlineQueryResultPhoto,
-    InputTextMessageContent,
-)
+from pyrogram.types import (CallbackQuery, 
+                            InlineKeyboardButton,
+                            InlineQueryResultArticle,
+                            InlineQueryResultPhoto,
+                            InputTextMessageContent)
 from search_engine_parser import GoogleSearch
 
 from LovelyRobot import (
     DEV_USERS,
-    EVENT_LOGS,
+    EVENT_LOGS, 
     BOT_USERNAME,
     ubot2,
 )
-from LovelyRobot import pbot as app
+from LovelyRobot import pbot as app 
 from LovelyRobot import arq
 from LovelyRobot.services.keyboard import Ikb
-from LovelyRobot.utils.pluginhelper import (
-    convert_seconds_to_minutes as time_convert,
-    fetch,
-)
+from LovelyRobot.utils.pluginhelper import convert_seconds_to_minutes as time_convert, fetch
 from LovelyRobot.services.tasks import _get_tasks_text, all_tasks, rm_task
 from LovelyRobot.services.types import InlineQueryResultCachedDocument
 from LovelyRobot.modules.info import get_chat_info, get_user_info
@@ -92,7 +87,6 @@ async def paste(content):
     link = await _netcat("ezup.dev", 9999, content)
     return link
 
-
 async def inline_help_func(__HELP__):
     buttons = InlineKeyboard(row_width=4)
     buttons.add(
@@ -122,18 +116,20 @@ async def alive_function(answers):
     ubot_state = "Dead" if not await ubot2.get_me() else "Alive"
     buttons.add(
         InlineKeyboardButton("Main bot", url="https://t.me/Lovely_Ro_bot"),
-        InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(
+            "Go Inline!", switch_inline_query_current_chat=""
+        ),
     )
 
     msg = f"""
-**[Lovely Robot ❤️](https://t.me/Lovely_Ro_bot):**
+**[Lovely Robot ❤️](https://t.me/Blaze_Support):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [UBOT](t.me/Blaze_Support)
+**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [UBOT](t.me/The_Blaze_Network)
 """
     answers.append(
         InlineQueryResultArticle(
@@ -176,7 +172,9 @@ __**Translated from {result.src} to {result.dest}**__
             ),
             InlineQueryResultArticle(
                 title=result.translatedText,
-                input_message_content=InputTextMessageContent(result.translatedText),
+                input_message_content=InputTextMessageContent(
+                    result.translatedText
+                ),
             ),
         ]
     )
@@ -326,7 +324,9 @@ async def youtube_func(answers, text):
 **Duration:** {i.duration}
 **Uploaded:** {i.publish_time}
 **Description:** {i.long_desc}"""
-        description = f"{i.views} | {i.channel} | {i.duration} | {i.publish_time}"
+        description = (
+            f"{i.views} | {i.channel} | {i.duration} | {i.publish_time}"
+        )
         answers.append(
             InlineQueryResultArticle(
                 title=i.title,
@@ -408,7 +408,9 @@ async def tg_search_func(answers, text, user_id):
             ),
         )
         name = (
-            message.from_user.first_name if message.from_user.first_name else "NO NAME"
+            message.from_user.first_name
+            if message.from_user.first_name
+            else "NO NAME"
         )
         caption = f"""
 **Query:** {text}
@@ -461,7 +463,9 @@ async def music_inline_func(answers, query):
                 "duration": f_.audio.duration if f_.audio.duration else 0,
             }
         )
-    messages = list({v["duration"]: v for v in messages_ids_and_duration}.values())
+    messages = list(
+        {v["duration"]: v for v in messages_ids_and_duration}.values()
+    )
     messages_ids = [ff_["message_id"] for ff_ in messages]
     messages = await app.get_messages(chat_id, messages_ids[0:48])
     return [
@@ -586,7 +590,9 @@ async def speedtest_init(query):
         return answers
     msg = "**Click The Button Below To Perform A Speedtest**"
     button = InlineKeyboard(row_width=1)
-    button.add(InlineKeyboardButton(text="Test", callback_data="test_speedtest"))
+    button.add(
+        InlineKeyboardButton(text="Test", callback_data="test_speedtest")
+    )
     answers.append(
         InlineQueryResultArticle(
             title="Click Here",
@@ -738,7 +744,9 @@ async def tmdb_func(answers, query):
         )
         answers.append(
             InlineQueryResultPhoto(
-                photo_url=result.backdrop if result.backdrop else result.poster,
+                photo_url=result.backdrop
+                if result.backdrop
+                else result.poster,
                 caption=caption,
                 title=result.title,
                 description=f"{genre} • {result.releaseDate} • {result.rating} • {description}",
@@ -851,7 +859,9 @@ async def execute_code(query):
             answers.append(
                 InlineQueryResultArticle(
                     title="Error",
-                    input_message_content=InputTextMessageContent(response.result),
+                    input_message_content=InputTextMessageContent(
+                        response.result
+                    ),
                 )
             )
         else:
