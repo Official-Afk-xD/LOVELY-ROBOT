@@ -1,7 +1,7 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from LovelyRobot import telethn as tbot
 from LovelyRobot.events import register
-from LovelyRobot import ubot2 as ubot
+from LovelyRobot import LovelyRobot as ubot
 from asyncio.exceptions import TimeoutError
 
 
