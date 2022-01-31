@@ -79,42 +79,40 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-LovelyRobot_IMG = "https://telegra.ph/file/e90a902caccf00f2c6ca1.jpg"
+LovelyRobot_IMG = "https://telegra.ph/file/a09bb2525c64301d31990.jpg"
 
 PM_START_TEXT = """
-➪ [🌈](https://telegra.ph/file/e90a902caccf00f2c6ca1.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
-➪ *I'Am An Anime themed advance group management bot*
+➪ [🌈](https://telegra.ph/file/a09bb2525c64301d31990.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
+➪ *I'Am An Advance group management bot*
 ➪ *Am Very Fast Awesome Features* 
 ───────────────────────
 × *Uptime:* {}
 × {} *User, Across* {} *Chats.*
 ───────────────────────
-⛦➪ *Thanks for useing my bots !*
+⛦➪*Thanks for useing my bots !*
 """
 buttons = [
     [
-        InlineKeyboardButton(text="🔰 About Me", callback_data="LovelyRobot_"),
-        InlineKeyboardButton(
-            text="Basic help ❔", callback_data="LovelyRobot_basichelp"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="🔐 Help & Cmd", callback_data="help_back"),
-      InlineKeyboardButton(
-          text="Developer ⭐", url=f"t.me/log_afk"
-      ),
-  ],
-  [
-      InlineKeyboardButton(text="🚑 Support", url=f"https://t.me/BLAZE_SUPPORT"),
-      InlineKeyboardButton(
-          text="Updates 📢", url=f"https://t.me/The_Blaze_Network"
-      ),
-  ],
-  [
-      InlineKeyboardButton(
-          text="➕ Add me to your Group ➕", url="t.me/Lovely_ro_bot?startgroup=true"),
-  ],
-]
+                        InlineKeyboardButton(
+                            text="Add Lovely To Your Group",
+                            url="t.me/Lovely_Ro_bot?startgroup=true"),
+                    ],
+                   [
+                       InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
+                      InlineKeyboardButton(text="About Me❔", callback_data="LovelyRobot_"),
+                       InlineKeyboardButton(text="[► Basic ◄]", callback_data="LovelyRobot_basichelp"),
+                     
+                     ],
+                    [                  
+                       InlineKeyboardButton(
+                             text="🚑 Support",
+                             url="https://t.me/Blaze_support"),
+                       InlineKeyboardButton(
+                             text="Updates 📢",
+                             url="https://t.me/the_Blaze_Network")
+    
+                     ], 
+    ]
 
 HELP_STRINGS = """
 *➪ MAIN COMMANDS ➪*
@@ -243,7 +241,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            LovelyRobot_IMG, caption= "Heya, Lovely Robot Here.. How can help you?🙂\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            LovelyRobot_IMG, caption= "Heya, Lovely Robot Here.. How can ! I help you?🙂\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -399,7 +397,7 @@ def LovelyRobot_about_callback(update, context):
                             text="Updates 📢", url="t.me/the_Blaze_Network"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="LovelyRobot_back")],
+                    [InlineKeyboardButton(text="⛦ Back ⛦", callback_data="LovelyRobot_back")],
                 ]
             ),
         )
@@ -480,8 +478,8 @@ def LovelyRobot_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="⛦ Unique Society", url="t.me/UNIQUE_SOCIETY"),
-                    InlineKeyboardButton(text="Dear Comrade ⛦", url="t.me/all_Dear_COMRADE"),
+                    InlineKeyboardButton(text="⛦ Harsh sHukla ⛦", url="t.me/log_afk"),
+                    InlineKeyboardButton(text="⛦ Chichat ⛦", url="t.me/UNIQUE_SOCIETY"),
                  ],
                  [
                     InlineKeyboardButton(text="🚑 Support", url="https://t.me/Blaze_Support"),
@@ -823,7 +821,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[Hey, I am Alive 🙂](https://telegra.ph/file/71632553cebaee2336ced.jpg)", parse_mode=ParseMode.MARKDOWN) 
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[Heya, I am Alive 🙂]", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
