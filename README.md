@@ -34,7 +34,7 @@
 </h2>
 
 <p align="center">
-<a href="https://t.me/log_afk"> <img src="https://img.shields.io/badge/Vain-User-green?style=for-the-badge&logo=telegram" alt="Vain On Telegrame" /> </a>
+<a href="https://t.me/log_afk"> <img src="https://img.shields.io/badge/AFK-User-green?style=for-the-badge&logo=telegram" alt="Vain On Telegrame" /> </a>
 <a href="https://t.me/BLAZE_SUPPORT"> <img src="https://img.shields.io/badge/Support-Chat-green?style=for-the-badge&logo=telegram" alt="Support Chat" /> </a>
 <a href="https://t.me/THE_BLAZE_SUPPORT"> <img src="https://img.shields.io/badge/Update-Channel-green?style=for-the-badge&logo=telegram" alt="Update Channel" /> </a>
 </p>
