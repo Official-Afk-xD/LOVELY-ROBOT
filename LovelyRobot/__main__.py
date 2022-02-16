@@ -82,14 +82,12 @@ def get_readable_time(seconds: int) -> str:
 LovelyRobot_IMG = "https://telegra.ph/file/a09bb2525c64301d31990.jpg"
 
 PM_START_TEXT = """
-➪ [🌈](https://telegra.ph/file/9c7bad0426a9acb765e77.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
-➪*I'Am An Advance group management bot*
-➪*Am Very Fast Awesome Features* 
-───────────────────────
+[🌈](https://telegra.ph/file/9c7bad0426a9acb765e77.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
+Im Powerfull Management Bot And I Will Help In Managing Your Group.
+➖➖➖➖➖➖➖➖➖➖➖➖➖
 × *Uptime:* {}
 × {} *User, Across* {} *Chats.*
-───────────────────────
-⛦➪*Thanks for useing my bots !*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 buttons = [
     [
