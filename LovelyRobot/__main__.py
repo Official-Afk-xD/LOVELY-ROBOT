@@ -106,11 +106,15 @@ buttons = [
                     [                  
                        InlineKeyboardButton(
                              text="🚑 Support",
-                             url="https://t.me/Blaze_support"),
+                             url="https://t.me/Blaze_Support"),
                        InlineKeyboardButton(
                              text="Updates 📢",
-                             url="https://t.me/the_Blaze_Network")
-    
+                             url="https://t.me/The_Blaze_Network")
+                     ],
+                    [
+                       InlineKeyboardButton(
+                          text="♻️ Source Code ♻️", url="https://github.com/Official-afk-xD/Lovely-Robot")
+
                      ], 
     ]
 
