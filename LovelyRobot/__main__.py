@@ -82,9 +82,9 @@ def get_readable_time(seconds: int) -> str:
 LovelyRobot_IMG = "https://telegra.ph/file/a09bb2525c64301d31990.jpg"
 
 PM_START_TEXT = """
-➪ [🌈](https://telegra.ph/file/a09bb2525c64301d31990.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
-➪ *I'Am An Advance group management bot*
-➪ *Am Very Fast Awesome Features* 
+➪ [🌈](https://telegra.ph/file/9c7bad0426a9acb765e77.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
+➪*I'Am An Advance group management bot*
+➪*Am Very Fast Awesome Features* 
 ───────────────────────
 × *Uptime:* {}
 × {} *User, Across* {} *Chats.*
@@ -99,7 +99,7 @@ buttons = [
                     ],
                    [
                        InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
-                      InlineKeyboardButton(text="About Me❔", callback_data="LovelyRobot_"),
+                      InlineKeyboardButton(text="About ❔", callback_data="LovelyRobot_"),
                        InlineKeyboardButton(text="[► Basic ◄]", callback_data="LovelyRobot_basichelp"),
                      
                      ],
@@ -478,7 +478,7 @@ def LovelyRobot_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="⛦ Harsh sHukla ⛦", url="t.me/log_afk"),
+                    InlineKeyboardButton(text="⛦Official AFK⛦", url="t.me/log_afk"),
                     InlineKeyboardButton(text="⛦ Chichat ⛦", url="t.me/UNIQUE_SOCIETY"),
                  ],
                  [
@@ -501,12 +501,12 @@ def LovelyRobot_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="⛦ Harsh Pandit", url="https://t.me/harsh_Pandit_xd"),
+                    InlineKeyboardButton(text="⛦ Harsh ", url="https://t.me/harsh_Pandit_xd"),
                     InlineKeyboardButton(text="Evil Boy ⛦", url="https://t.me/EVIL_xd_boy"),
                  ],
                  [
-                    InlineKeyboardButton(text="⛦ Andy Pandit", url="https://t.me/Its_pandit_boy"),
-                    InlineKeyboardButton(text="Yash Thakur ⛦", url="https://t.me/Yash_thakuur"),                
+                    InlineKeyboardButton(text="⛦ LOG AFK", url="https://t.me/LOG_AFK"),
+                    InlineKeyboardButton(text="Official AFK ⛦", url="https://t.me/Log_Afk_xD"),                
                  ],
                  [
                     InlineKeyboardButton(text="⛦ Back ⛦", callback_data="LovelyRobot_"),
