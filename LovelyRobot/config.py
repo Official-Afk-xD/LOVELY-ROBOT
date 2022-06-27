@@ -21,7 +21,7 @@ class Config(object):
     EVENT_LOGS = -1001577398383
 
     ALLOW_CHATS = "True"
-    SQLALCHEMY_DATABASE_URI = 'ELEPHAT OR HEROKU DB URL'  
+    SQLALCHEMY_DATABASE_URI = 'something://somewhat:user@hosturl:port/databasename'  
     LOAD = []
     NO_LOAD = ['rss', 'cleaner', 'connection', 'math']
     WEBHOOK = None
