@@ -27,3 +27,14 @@ The easiest way to deploy this Bot is via Heroku.
 
 
 #
+
+## 🚀 𝐃ερℓσү ση нεяσкυ 
+
+
+[![Deploy](https://telegra.ph/file/b1b3358ee6096d4750b82.jpg)](https://heroku.com/deploy?template=https://github.com/TEAM-BLAZ/blaze)
+ 
+__________________________________
+# [sтяιηg sεssιση](https://replit.com/@TCeReaLkiller/BLAZE-SPAMMER)
+
+
+𝖭𝗈 𝖱𝖾𝗊𝗎𝗂𝗋𝖾𝗆𝖾𝗇𝗍 𝗈𝖿 𝖠𝖯𝖨 𝖨𝖣 𝖺𝗇𝖽 𝖠𝖯𝖨 𝖧𝖠𝖲𝖧
