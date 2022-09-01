@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 LovelyRobot_IMG = "https://telegra.ph/file/a09bb2525c64301d31990.jpg"
 
 PM_START_TEXT = """
-[🌈]() ' ☞ ✰Hello... Friends ─ 「[{}]」
+[🌈](https://telegra.ph/file/469f704f4898f10f9cf3b.jpg) ' ☞ ✰Hello... Friends ─ 「[{}]」
 Im Powerfull Management Bot And I Will Help In Managing Your Group.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 × *Uptime:* {}
@@ -97,7 +97,7 @@ buttons = [
     [
                         InlineKeyboardButton(
                             text="Add Lovely To Your Group",
-                            url="t.me/Lovely_Ro_bot?startgroup=true"),
+                            url="t.me/LOVELY_RO_BOT?startgroup=true"),
                     ],
                    [
                        InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
