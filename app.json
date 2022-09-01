@@ -4,7 +4,7 @@
 
       "description": "Telegram group management bot Powered By @THE_BLAZE_NETWORK ⛦➪.",
 
-      "logo": "https://telegra.ph/file/4959daba057bdf77b67fd.jpg",
+      "logo": "https://telegra.ph/file/e0fe477730310fb1b610e.jpg",
 
       "keywords": [
 
@@ -136,7 +136,7 @@
 
          "description": "Your username without the @",
 
-         "value": "log_afk"
+         "value": "Piro_x_Power"
 
       },
 
@@ -146,7 +146,7 @@
 
          "required": true,
 
-         "value": "BLAZE_SUPPORT"
+         "value": "Team_Shadow_Support"
 
       },
 
@@ -366,7 +366,7 @@
 
          "required": false,
 
-         "value": "https://t.me/Blaze_Support"
+         "value": "Team_Shadow_xD"
 
       },
 
