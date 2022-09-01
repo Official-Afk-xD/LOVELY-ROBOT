@@ -111,11 +111,7 @@ buttons = [
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                        InlineKeyboardButton(
                              text="Updates 📢",
-                             url=f"https://t.me/{DONATION_LINK}")
-                     ],
-                    [
-                       InlineKeyboardButton(
-                          text="♻️ Source Code ♻️", url="https://github.com/Official-afk-xD/Lovely-Robot")
+                             url=f"https://t.me/{DONATION_LINK}")                    
 
                      ], 
     ]
