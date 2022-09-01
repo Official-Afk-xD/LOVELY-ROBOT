@@ -18,14 +18,6 @@
 <a href="https://t.me/TEAM_SHADOW_SUPPORT"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 <a href="t.me/TEAM_SHADOW_XD"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
-
-## 🂱 Heroku Deploy 🂱
-The easiest way to deploy this Bot is via Heroku.
-
-<p align="left"><a href="https://heroku.com/deploy?template=https://github.com/Official-Afk-xD/LOVELY-ROBOT"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
-
-
-
 #
 
 ## 🚀 𝐃ερℓσү ση нεяσкυ 
@@ -34,5 +26,11 @@ The easiest way to deploy this Bot is via Heroku.
 [![Deploy](https://telegra.ph/file/272d05fa5ebebf113a006.jpg)](https://heroku.com/deploy?template=https://github.com/Official-Afk-xD/LOVELY-ROBOT)
  
 __________________________________
+
+## 🂱 Owner 🂱
+The easiest way to deploy this Bot is via Heroku.
+
+<p align="left"><a href="t.me/piro_x_power"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+
 
 
