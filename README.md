@@ -27,10 +27,6 @@
  
 __________________________________
 
-## 🂱 Owner 🂱
-The easiest way to deploy this Bot is via Heroku.
+# Credit Lovely Bot
 
-<p align="left"><a href="t.me/piro_x_power"> <img src="" 
-
-
-Powered By- [SAM](T.ME/PIRO_X_POWER).
+LOVELY OWNER- [OWNER](T.ME/PIRO_X_POWER)
