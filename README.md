@@ -27,6 +27,4 @@
  
 __________________________________
 
-# Credit Lovely Bot
-
-# LOVELY OWNER- [OWNER](T.ME/PIRO_X_POWER)
+#
