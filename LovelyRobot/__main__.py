@@ -88,6 +88,10 @@ Im Powerfull Management Bot And I Will Help In Managing Your Group.
 × *Uptime:* {}
 × {} *User, Across* {} *Chats.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
+➤ Made specifically to manage your group.
+───────────────────────
+➤ Maintained By:- [𐏓〬⃝ ⸙‌ٖٖٖٖٖٖٜٖٖٖٖٖٖ 𝐒 𝐀 𝐌 ⸙‌ٖٖٖٖٖٖٜٖٖٖٖٖٖ ااـ꯭](t.me/Piro_x_power).
+───────────────────────
 """
 buttons = [
     [
@@ -104,10 +108,10 @@ buttons = [
                     [                  
                        InlineKeyboardButton(
                              text="🚑 Support",
-                             url="https://t.me/Blaze_Support"),
+                             url=f"https://t.me/{SUPPORT_CHAT}"),
                        InlineKeyboardButton(
                              text="Updates 📢",
-                             url="https://t.me/The_Blaze_Network")
+                             url=f"https://t.me/{DONATION_LINK}")
                      ],
                     [
                        InlineKeyboardButton(
