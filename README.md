@@ -27,10 +27,10 @@
  
 __________________________________
 
-## 🂱 Credit  🂱
+## 🂱 Owner 🂱
 The easiest way to deploy this Bot is via Heroku.
 
-<p align="left"><a href="t.me/piro_x_power"> <img src="https://img.shields.io/badge/I%20Am%Owner-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="left"><a href="t.me/piro_x_power"> <img src="" 
 
 
 
